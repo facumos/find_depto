@@ -1,38 +1,31 @@
-import requests
-from bs4 import BeautifulSoup
 import re
-import time
 import logging
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.zonaprop.com.ar"
 SEARCH_BASE = "https://www.zonaprop.com.ar/departamentos-alquiler-la-plata"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-    "Accept-Language": "es-AR,es;q=0.9,en;q=0.8",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Connection": "keep-alive",
-}
-
 
 def parse_price(text):
     """Parse price from text like '$ 450.000'"""
+    # Remove USD prices, keep ARS only
+    if "USD" in text.upper() or "U$S" in text.upper():
+        return None
     text = text.replace("$", "").replace(".", "").replace(" ", "").strip()
     try:
-        return int(text)
+        return int(re.sub(r'[^\d]', '', text))
     except ValueError:
         return None
 
 
 def parse_expensas(text):
-    """Parse expensas from text like '+ $ 50.000 Expensas'"""
-    match = re.search(r'\+?\s*\$?\s*([\d\.]+)', text.replace(".", ""))
+    """Parse expensas from text like '$ 50.000 Expensas'"""
+    match = re.search(r'\$?\s*([\d\.]+)\s*expensas', text.lower())
     if match:
         try:
-            return int(match.group(1))
+            return int(match.group(1).replace(".", ""))
         except ValueError:
             pass
     return None
@@ -46,112 +39,121 @@ def parse_rooms(text):
     return None
 
 
-def scrape_zonaprop(max_pages=5, delay=3, max_retries=3):
+def parse_listing_from_text(card_text, url):
+    """Parse listing data from card text content."""
+    lines = card_text.strip().split('\n')
+
+    price = None
+    expensas = None
+    rooms = None
+
+    for line in lines:
+        line = line.strip()
+
+        # Parse price (usually starts with $)
+        if line.startswith('$') and price is None:
+            if 'expensas' not in line.lower():
+                price = parse_price(line)
+
+        # Parse expensas
+        if 'expensas' in line.lower() and expensas is None:
+            expensas = parse_expensas(line)
+
+        # Parse rooms
+        if 'amb' in line.lower() and rooms is None:
+            rooms = parse_rooms(line)
+
+    return price, expensas, rooms
+
+
+def scrape_zonaprop(max_pages=3, delay=3):
     """
-    Scrape apartment listings from ZonaProp.
+    Scrape apartment listings from ZonaProp using Playwright.
 
     Args:
         max_pages: Maximum number of pages to scrape
-        delay: Delay between page requests in seconds
-        max_retries: Maximum retry attempts for failed requests
+        delay: Delay between actions in seconds
 
     Returns:
         list: List of apartment listing dictionaries
     """
     listings = []
 
-    for page in range(1, max_pages + 1):
-        url = f"{SEARCH_BASE}.html" if page == 1 else f"{SEARCH_BASE}-pagina-{page}.html"
-        logger.debug(f"Scraping ZonaProp page {page}: {url}")
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(
+                viewport={"width": 1920, "height": 1080},
+                user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            )
+            page = context.new_page()
 
-        r = None
-        for retry in range(max_retries):
-            try:
-                r = requests.get(url, headers=HEADERS, timeout=15)
-                r.raise_for_status()
-                break
-            except requests.exceptions.RequestException as e:
-                if retry == max_retries - 1:
-                    logger.error(f"Failed to fetch ZonaProp page {page} after {max_retries} attempts: {e}")
-                    return listings
-                logger.warning(f"ZonaProp page {page} request failed (attempt {retry + 1}/{max_retries}), retrying...")
-                time.sleep(delay * (retry + 1))
+            for page_num in range(1, max_pages + 1):
+                url = f"{SEARCH_BASE}.html" if page_num == 1 else f"{SEARCH_BASE}-pagina-{page_num}.html"
+                logger.debug(f"Scraping ZonaProp page {page_num}: {url}")
 
-        if r is None or r.status_code != 200:
-            logger.warning(f"ZonaProp page {page} returned status {r.status_code if r else 'None'}, stopping")
-            break
-
-        try:
-            soup = BeautifulSoup(r.text, "lxml")
-
-            # ZonaProp uses data-qa="posting" for listing cards
-            cards = soup.select('[data-qa="posting"]')
-
-            if not cards:
-                # Fallback selectors
-                cards = soup.select('.postingCard') or soup.select('div[data-posting-type]')
-
-            if not cards:
-                logger.info(f"No ZonaProp listings found on page {page}, stopping")
-                break
-
-            logger.debug(f"Found {len(cards)} ZonaProp listings on page {page}")
-
-            for card in cards:
                 try:
-                    # Get link
-                    link_elem = card.select_one('a[data-qa="posting-url"]') or card.select_one('a')
-                    if not link_elem or "href" not in link_elem.attrs:
-                        continue
+                    page.goto(url, wait_until="domcontentloaded", timeout=30000)
+                    page.wait_for_timeout(delay * 1000)
 
-                    link = link_elem["href"]
-                    full_url = BASE_URL + link if link.startswith("/") else link
+                    # Wait for listings to load
+                    page.wait_for_selector('div[data-posting-type]', timeout=15000)
 
-                    # Get price
-                    price_elem = card.select_one('[data-qa="POSTING_CARD_PRICE"]') or card.select_one('.firstPrice')
-                    if not price_elem:
-                        continue
+                    # Get all listing cards
+                    cards = page.query_selector_all('div[data-posting-type]')
 
-                    price = parse_price(price_elem.get_text(strip=True))
-                    if price is None:
-                        continue
+                    if not cards:
+                        logger.info(f"No ZonaProp listings found on page {page_num}, stopping")
+                        break
 
-                    # Get expensas
-                    expensas = None
-                    expensas_elem = card.select_one('[data-qa="POSTING_CARD_EXPENSES"]') or card.select_one('.postingCardExpenses')
-                    if expensas_elem:
-                        expensas = parse_expensas(expensas_elem.get_text(strip=True))
+                    logger.debug(f"Found {len(cards)} ZonaProp listings on page {page_num}")
 
-                    # Get rooms from features
-                    rooms = None
-                    features_elem = card.select_one('[data-qa="POSTING_CARD_FEATURES"]') or card.select_one('.postingCardMainFeatures')
-                    if features_elem:
-                        rooms = parse_rooms(features_elem.get_text(strip=True))
+                    for card in cards:
+                        try:
+                            # Get link
+                            link_elem = card.query_selector('a[href*="/propiedades/"]') or card.query_selector('a')
+                            if not link_elem:
+                                continue
 
-                    # Fallback: search in full card text
-                    if rooms is None:
-                        rooms = parse_rooms(card.get_text(" ", strip=True))
+                            href = link_elem.get_attribute("href")
+                            if not href:
+                                continue
 
-                    listing = {
-                        "id": full_url,
-                        "price": price,
-                        "rooms": rooms,
-                        "expensas": expensas,
-                        "url": full_url,
-                        "source": "zonaprop"
-                    }
+                            full_url = BASE_URL + href if href.startswith("/") else href
 
-                    listings.append(listing)
+                            # Parse from card text
+                            card_text = card.inner_text()
+                            price, expensas, rooms = parse_listing_from_text(card_text, full_url)
 
+                            if price is None:
+                                continue
+
+                            listing = {
+                                "id": full_url,
+                                "price": price,
+                                "rooms": rooms,
+                                "expensas": expensas,
+                                "url": full_url,
+                                "source": "zonaprop"
+                            }
+
+                            listings.append(listing)
+
+                        except Exception as e:
+                            logger.warning(f"Error parsing ZonaProp card: {e}")
+                            continue
+
+                except PlaywrightTimeout:
+                    logger.warning(f"Timeout on ZonaProp page {page_num}")
+                    break
                 except Exception as e:
-                    logger.warning(f"Error parsing ZonaProp listing card: {e}")
-                    continue
+                    logger.error(f"Error on ZonaProp page {page_num}: {e}")
+                    break
 
-        except Exception as e:
-            logger.error(f"Error parsing ZonaProp page {page}: {e}")
-            break
+            browser.close()
 
-        time.sleep(delay)
+    except Exception as e:
+        logger.error(f"Failed to initialize Playwright for ZonaProp: {e}")
 
     logger.info(f"Successfully scraped {len(listings)} listings from ZonaProp")
     return listings

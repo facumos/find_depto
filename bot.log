@@ -624,3 +624,7 @@ Traceback (most recent call last):
   File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
     from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 ModuleNotFoundError: No module named 'telegram'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
+ModuleNotFoundError: No module named 'telegram'
