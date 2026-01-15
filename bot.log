@@ -1,0 +1,626 @@
+2026-01-10 16:50:57,492 - __main__ - INFO - Starting apartment bot scan...
+2026-01-10 16:50:57,492 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-10 16:50:57,493 - __main__ - INFO - Loaded 0 previously sent listings
+2026-01-10 16:50:58,375 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-10 16:51:11,141 - scrappers.argenprop - INFO - Successfully scraped 99 listings from 5 pages
+2026-01-10 16:51:11,142 - __main__ - INFO - Scraped 99 listings
+2026-01-10 16:51:11,155 - __main__ - INFO - Scan complete. Found 0 new matches.
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+2026-01-10 18:19:38,852 - __main__ - INFO - Starting apartment bot scan...
+2026-01-10 18:19:38,853 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 1, 'max_rooms': 3, 'max_expensas': 100000}
+2026-01-10 18:19:38,855 - __main__ - INFO - Loaded 0 previously sent listings
+2026-01-10 18:19:39,427 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-10 18:19:52,550 - scrappers.argenprop - INFO - Successfully scraped 99 listings from 5 pages
+2026-01-10 18:19:52,556 - __main__ - INFO - Scraped 99 listings
+2026-01-10 18:19:52,568 - __main__ - INFO - Scan complete. Found 0 new matches.
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+2026-01-13 12:32:58,852 - __main__ - INFO - Starting apartment bot scan...
+2026-01-13 12:32:58,852 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 1, 'max_rooms': 3, 'max_expensas': 100000}
+2026-01-13 12:32:58,853 - __main__ - INFO - Loaded 0 previously sent listings
+2026-01-13 12:33:00,120 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:33:00,122 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:33:03,377 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:33:06,181 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:33:09,423 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:33:12,197 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:33:14,205 - scrappers.argenprop - INFO - Successfully scraped 94 listings from 5 pages
+2026-01-13 12:33:14,207 - __main__ - INFO - Scraped 94 listings
+2026-01-13 12:33:14,217 - __main__ - INFO - Scan complete. Found 0 new matches.
+2026-01-13 12:57:13,359 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-13 12:57:13,359 - __main__ - INFO - Chat ID: 1416589926
+2026-01-13 12:57:13,360 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-13 12:57:13,360 - __main__ - INFO - ⚠️  TEST MODE: Running once only
+2026-01-13 12:57:13,360 - __main__ - INFO - ==================================================
+2026-01-13 12:57:13,360 - __main__ - INFO - Starting apartment check at 2026-01-13 12:57:13
+2026-01-13 12:57:13,362 - __main__ - INFO - Loaded 0 previously sent listings
+2026-01-13 12:57:13,362 - __main__ - INFO - Scraping ArgenProp...
+2026-01-13 12:57:14,216 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:14,218 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:16,940 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:19,620 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:22,305 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:25,168 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:27,177 - scrappers.argenprop - INFO - Successfully scraped 94 listings from 5 pages
+2026-01-13 12:57:27,180 - __main__ - INFO - Found 94 total listings
+2026-01-13 12:57:27,193 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-13 12:57:27,193 - __main__ - INFO - ==================================================
+2026-01-13 12:57:27,194 - __main__ - INFO - ✅ Test complete! Check Telegram for messages.
+2026-01-13 12:57:27,194 - __main__ - INFO - 💡 If it worked, set TEST_MODE = False in main.py to enable scheduling
+2026-01-13 12:57:49,686 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-13 12:57:49,686 - __main__ - INFO - Chat ID: 1416589926
+2026-01-13 12:57:49,687 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-13 12:57:49,687 - __main__ - INFO - ⚠️  TEST MODE: Running once only
+2026-01-13 12:57:49,687 - __main__ - INFO - ==================================================
+2026-01-13 12:57:49,687 - __main__ - INFO - Starting apartment check at 2026-01-13 12:57:49
+2026-01-13 12:57:49,687 - __main__ - INFO - Loaded 0 previously sent listings
+2026-01-13 12:57:49,687 - __main__ - INFO - Scraping ArgenProp...
+2026-01-13 12:57:50,016 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:50,018 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:52,288 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:54,573 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:56,849 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:57:59,141 - scrappers.argenprop - WARNING - Error parsing listing card: invalid literal for int() with base 10: ''
+2026-01-13 12:58:01,150 - scrappers.argenprop - INFO - Successfully scraped 94 listings from 5 pages
+2026-01-13 12:58:01,151 - __main__ - INFO - Found 94 total listings
+2026-01-13 12:58:01,163 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-13 12:58:01,163 - __main__ - INFO - ==================================================
+2026-01-13 12:58:01,163 - __main__ - INFO - ✅ Test complete! Check Telegram for messages.
+2026-01-13 12:58:01,163 - __main__ - INFO - 💡 If it worked, set TEST_MODE = False in main.py to enable scheduling
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 13:09:47,222 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-15 13:09:47,223 - __main__ - INFO - Chat ID: 1416589926
+2026-01-15 13:09:47,223 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-15 13:09:47,223 - __main__ - INFO - Checking every 30 minutes...
+2026-01-15 13:09:47,223 - __main__ - INFO - ==================================================
+2026-01-15 13:09:47,223 - __main__ - INFO - Starting apartment check at 2026-01-15 13:09:47
+2026-01-15 13:09:47,223 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 13:09:47,223 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 13:10:01,751 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 13:10:01,754 - __main__ - INFO - Found 100 total listings
+2026-01-15 13:10:01,788 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 13:10:01,788 - __main__ - INFO - ==================================================
+2026-01-15 13:18:39,558 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-15 13:18:39,558 - __main__ - INFO - Chat ID: 1416589926
+2026-01-15 13:18:39,558 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-15 13:18:39,558 - __main__ - INFO - Checking every 30 minutes...
+2026-01-15 13:18:39,558 - __main__ - INFO - ==================================================
+2026-01-15 13:18:39,559 - __main__ - INFO - Starting apartment check at 2026-01-15 13:18:39
+2026-01-15 13:18:39,559 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 13:18:39,559 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 13:18:55,465 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 13:18:55,467 - __main__ - INFO - Found 100 total listings
+2026-01-15 13:18:55,493 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 13:18:55,494 - __main__ - INFO - ==================================================
+2026-01-15 13:25:17,658 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-15 13:25:17,658 - __main__ - INFO - Chat ID: 1416589926
+2026-01-15 13:25:17,658 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-15 13:25:17,658 - __main__ - INFO - Checking every 30 minutes...
+2026-01-15 13:25:17,659 - __main__ - INFO - ==================================================
+2026-01-15 13:25:17,659 - __main__ - INFO - Starting apartment check at 2026-01-15 13:25:17
+2026-01-15 13:25:17,659 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 13:25:17,659 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 13:25:32,475 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 13:25:32,477 - __main__ - INFO - Found 100 total listings
+2026-01-15 13:25:32,489 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 13:25:32,491 - __main__ - INFO - ==================================================
+2026-01-15 13:25:52,699 - __main__ - INFO - Bot stopped by user
+2026-01-15 13:26:05,636 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-15 13:26:05,636 - __main__ - INFO - Chat ID: 1416589926
+2026-01-15 13:26:05,636 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-15 13:26:05,636 - __main__ - INFO - Checking every 30 minutes...
+2026-01-15 13:26:05,638 - __main__ - INFO - ==================================================
+2026-01-15 13:26:05,638 - __main__ - INFO - Starting apartment check at 2026-01-15 13:26:05
+2026-01-15 13:26:05,639 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 13:26:05,639 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 13:26:25,135 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-15 13:26:25,135 - __main__ - INFO - Chat ID: 1416589926
+2026-01-15 13:26:25,135 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 2, 'max_expensas': 100000}
+2026-01-15 13:26:25,135 - __main__ - INFO - Checking every 30 minutes...
+2026-01-15 13:26:25,135 - __main__ - INFO - ==================================================
+2026-01-15 13:26:25,136 - __main__ - INFO - Starting apartment check at 2026-01-15 13:26:25
+2026-01-15 13:26:25,136 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 13:26:25,136 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 13:30:00,776 - __main__ - INFO - 🤖 Telegram Apartment Bot Started
+2026-01-15 13:30:00,776 - __main__ - INFO - Chat ID: 1416589926
+2026-01-15 13:30:00,777 - __main__ - INFO - Criteria: {'max_price': 600000, 'min_rooms': 1, 'max_expensas': 100000}
+2026-01-15 13:30:00,777 - __main__ - INFO - Checking every 30 minutes...
+2026-01-15 13:30:00,777 - __main__ - INFO - ==================================================
+2026-01-15 13:30:00,777 - __main__ - INFO - Starting apartment check at 2026-01-15 13:30:00
+2026-01-15 13:30:00,777 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 13:30:00,777 - __main__ - INFO - Scraping ArgenProp...
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 13:30:12,352 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 13:30:12,355 - __main__ - INFO - Found 100 total listings
+2026-01-15 13:30:12,369 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 13:30:12,372 - __main__ - INFO - ==================================================
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 14:00:12,380 - __main__ - INFO - ==================================================
+2026-01-15 14:00:12,380 - __main__ - INFO - Starting apartment check at 2026-01-15 14:00:12
+2026-01-15 14:00:12,381 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 14:00:12,382 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 14:00:27,568 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 14:00:27,569 - __main__ - INFO - Found 100 total listings
+2026-01-15 14:00:27,582 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 14:00:27,582 - __main__ - INFO - ==================================================
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 14:30:27,589 - __main__ - INFO - ==================================================
+2026-01-15 14:30:27,590 - __main__ - INFO - Starting apartment check at 2026-01-15 14:30:27
+2026-01-15 14:30:27,608 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 14:30:27,609 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 14:30:42,825 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 14:30:42,826 - __main__ - INFO - Found 100 total listings
+2026-01-15 14:30:42,854 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 14:30:42,854 - __main__ - INFO - ==================================================
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 15:00:42,861 - __main__ - INFO - ==================================================
+2026-01-15 15:00:42,862 - __main__ - INFO - Starting apartment check at 2026-01-15 15:00:42
+2026-01-15 15:00:42,862 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 15:00:42,863 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 15:00:57,170 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 15:00:57,172 - __main__ - INFO - Found 100 total listings
+2026-01-15 15:00:57,200 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 15:00:57,201 - __main__ - INFO - ==================================================
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 15:30:57,208 - __main__ - INFO - ==================================================
+2026-01-15 15:30:57,209 - __main__ - INFO - Starting apartment check at 2026-01-15 15:30:57
+2026-01-15 15:30:57,209 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 15:30:57,210 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 15:31:11,629 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 15:31:11,630 - __main__ - INFO - Found 100 total listings
+2026-01-15 15:31:11,661 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 15:31:11,661 - __main__ - INFO - ==================================================
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+2026-01-15 16:01:11,668 - __main__ - INFO - ==================================================
+2026-01-15 16:01:11,669 - __main__ - INFO - Starting apartment check at 2026-01-15 16:01:11
+2026-01-15 16:01:11,669 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 16:01:11,670 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 16:01:26,335 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 16:01:26,336 - __main__ - INFO - Found 100 total listings
+2026-01-15 16:01:26,352 - __main__ - INFO - Summary: 94 new listings, 0 matched criteria and sent
+2026-01-15 16:01:26,353 - __main__ - INFO - ==================================================
+2026-01-15 16:07:51,275 - __main__ - INFO - Bot stopped by user
+2026-01-15 16:13:21,499 - __main__ - INFO - 🤖 Telegram Apartment Bot Starting...
+2026-01-15 16:13:21,733 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-15 16:13:21,734 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2026-01-15 16:13:22,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getMe "HTTP/1.1 200 OK"
+2026-01-15 16:13:22,824 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/deleteWebhook "HTTP/1.1 200 OK"
+2026-01-15 16:13:22,826 - apscheduler.scheduler - INFO - Added job "check_and_notify" to job store "default"
+2026-01-15 16:13:22,826 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-15 16:13:22,826 - telegram.ext.Application - INFO - Application started
+2026-01-15 16:13:23,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:13:31,741 - apscheduler.executors.default - INFO - Running job "check_and_notify (trigger: interval[0:30:00], next run at: 2026-01-15 19:43:31 UTC)" (scheduled at 2026-01-15 19:13:31.732098+00:00)
+2026-01-15 16:13:31,742 - __main__ - INFO - ==================================================
+2026-01-15 16:13:31,742 - __main__ - INFO - Starting apartment check at 2026-01-15 16:13:31
+2026-01-15 16:13:31,744 - __main__ - INFO - Loaded 6 previously sent listings
+2026-01-15 16:13:31,745 - __main__ - INFO - Scraping ArgenProp...
+2026-01-15 16:13:46,136 - scrappers.argenprop - INFO - Successfully scraped 100 listings from 5 pages
+2026-01-15 16:13:46,138 - __main__ - INFO - Found 100 total listings
+2026-01-15 16:13:46,139 - __main__ - INFO - Checking for 0 registered users
+2026-01-15 16:13:46,167 - __main__ - INFO - ==================================================
+2026-01-15 16:13:46,167 - apscheduler.executors.default - INFO - Job "check_and_notify (trigger: interval[0:30:00], next run at: 2026-01-15 19:43:31 UTC)" executed successfully
+2026-01-15 16:13:46,168 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:13:46,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:13:47,531 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-15 16:13:56,875 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:13:59,423 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:14:00,324 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-15 16:14:07,066 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:14:08,011 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-15 16:14:08,394 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-15 16:14:13,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:14:13,746 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-15 16:14:23,576 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:14:33,945 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:14:44,288 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-15 16:14:54,635 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/main.py", line 4, in <module>
+    from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
+ModuleNotFoundError: No module named 'telegram'
