@@ -7,6 +7,8 @@ from telegram.ext import (
     ConversationHandler, ContextTypes, filters
 )
 from scrappers.argenprop import scrape_argenprop
+from scrappers.zonaprop import scrape_zonaprop
+from scrappers.mercadolibre import scrape_mercadolibre
 from filters import matches
 from notifier import send_message
 from storage import load_sent, save_sent
@@ -248,9 +250,19 @@ async def check_and_notify(context: ContextTypes.DEFAULT_TYPE):
         sent = load_sent()
         logger.info(f"Loaded {len(sent)} previously sent listings")
 
+        # Scrape all sources
+        listings = []
+
         logger.info("Scraping ArgenProp...")
-        listings = scrape_argenprop(max_pages=5)
-        logger.info(f"Found {len(listings)} total listings")
+        listings.extend(scrape_argenprop(max_pages=5))
+
+        logger.info("Scraping ZonaProp...")
+        listings.extend(scrape_zonaprop(max_pages=5))
+
+        logger.info("Scraping MercadoLibre...")
+        listings.extend(scrape_mercadolibre(max_pages=5))
+
+        logger.info(f"Found {len(listings)} total listings from all sources")
 
         # Get all registered users
         user_ids = get_all_user_ids()
