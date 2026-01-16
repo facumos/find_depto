@@ -47,8 +47,8 @@ class TestSendMessage:
 
         assert payload["parse_mode"] == "HTML"
         assert payload["chat_id"] == "123456"
-        assert "500000" in payload["text"]
-        assert "80000" in payload["text"]
+        assert "500.000" in payload["text"]
+        assert "80.000" in payload["text"]
         assert "2 ambientes" in payload["text"]
         assert sample_apartment["url"] in payload["text"]
 

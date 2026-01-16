@@ -2,9 +2,6 @@ def matches(ap, criteria):
     if ap["price"] is None or ap["rooms"] is None:
         return False
 
-    if ap["expensas"] is None:
-        return False  # conservative: ignore listings without expensas
-
     # Check minimum rooms
     if ap["rooms"] < criteria["min_rooms"]:
         return False
@@ -13,7 +10,14 @@ def matches(ap, criteria):
     if criteria.get("max_rooms") is not None and ap["rooms"] > criteria["max_rooms"]:
         return False
 
-    return (
-        ap["price"] <= criteria["max_price"]
-        and ap["expensas"] <= criteria["max_expensas"]
-    )
+    # Check price range
+    if criteria.get("min_price") is not None and ap["price"] < criteria["min_price"]:
+        return False
+    if ap["price"] > criteria["max_price"]:
+        return False
+
+    # Check expensas only if available
+    if ap["expensas"] is not None and ap["expensas"] > criteria["max_expensas"]:
+        return False
+
+    return True

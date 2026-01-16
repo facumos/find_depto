@@ -7,8 +7,10 @@ logger = logging.getLogger(__name__)
 CONFIG_FILE = Path("user_configs.json")
 
 DEFAULT_CONFIG = {
-    "max_price": 600000,
+    "min_price": 100000,
+    "max_price": 500000,
     "min_rooms": 1,
+    "max_rooms": 3,  
     "max_expensas": 100000
 }
 

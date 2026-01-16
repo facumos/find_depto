@@ -9,6 +9,7 @@ from telegram.ext import (
 from scrappers.argenprop import scrape_argenprop
 from scrappers.zonaprop import scrape_zonaprop
 from scrappers.mercadolibre import scrape_mercadolibre
+from scrappers.browser_manager import close_browser
 from filters import matches
 from notifier import send_message
 from storage import load_sent, save_sent
@@ -45,12 +46,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(
         "🏠 <b>Bienvenido al Bot de Departamentos!</b>\n\n"
-        "Te notificaré cuando encuentre departamentos que coincidan con tus criterios.\n\n"
+        "Te notificaré cuando encuentre departamentos en alquiler en La Plata "
+        "que coincidan con tus criterios.\n\n"
         f"<b>Tu configuración actual:</b>\n"
-        f"💲 Precio máximo: ${config['max_price']:,}\n"
-        f"🛏 Ambientes mínimos: {config['min_rooms']}\n"
+        f"💲 Precio: ${config.get('min_price', 0):,} - ${config['max_price']:,}\n"
+        f"🛏 Ambientes: {config['min_rooms']} - {config.get('max_rooms', 'sin límite')}\n"
         f"🧾 Expensas máximas: ${config['max_expensas']:,}\n\n"
-        "Usa /config para modificar tus filtros.",
+        "<b>Comandos disponibles:</b>\n"
+        "/config - Modificar tus filtros de búsqueda\n"
+        "/run - Buscar departamentos ahora (muestra 3 resultados)\n"
+        "/start - Ver este mensaje de ayuda\n\n"
+        "📬 Recibirás notificaciones automáticas cada hora con nuevos departamentos.",
         parse_mode="HTML"
     )
 
@@ -241,51 +247,131 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
+async def run_manual_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /run command - manually search and send latest 3 matching listings."""
+    user_id = update.effective_user.id
+    config = get_user_config(user_id)
+
+    await update.message.reply_text(
+        "🔍 Buscando departamentos...\nEsto puede tardar unos segundos."
+    )
+
+    try:
+        # Scrape all sources (fewer pages for speed)
+        listings = []
+        listings.extend(scrape_argenprop(max_pages=2))
+        listings.extend(scrape_zonaprop(max_pages=2))
+        listings.extend(scrape_mercadolibre(max_pages=2))
+
+        # Filter by user criteria
+        matching = [ap for ap in listings if matches(ap, config)]
+
+        if not matching:
+            await update.message.reply_text(
+                "😕 No encontré departamentos que coincidan con tus filtros.\n\n"
+                f"<b>Tus filtros actuales:</b>\n"
+                f"💲 Precio máximo: ${config['max_price']:,}\n"
+                f"🛏 Ambientes mínimos: {config['min_rooms']}\n"
+                f"🧾 Expensas máximas: ${config['max_expensas']:,}\n\n"
+                "Usa /config para modificar tus filtros.",
+                parse_mode="HTML"
+            )
+            return
+
+        # Send the latest 3 (listings are already in order from scraping)
+        count = min(3, len(matching))
+        await update.message.reply_text(
+            f"✅ Encontré {len(matching)} departamentos. Te muestro los últimos {count}:"
+        )
+
+        for ap in matching[:count]:
+            await send_telegram_message(context.bot, user_id, ap)
+
+    except Exception as e:
+        logger.error(f"Error in run_manual_search: {e}", exc_info=True)
+        await update.message.reply_text(
+            "❌ Ocurrió un error al buscar. Intenta de nuevo más tarde."
+        )
+
+
+# Maximum listings to send per source per cycle (to avoid flooding)
+MAX_LISTINGS_PER_SOURCE = 3
+
+# Quiet hours - don't send notifications between these hours (0-23)
+QUIET_HOURS_START = 0   # midnight
+QUIET_HOURS_END = 6     # 6 AM
+
+
+def is_quiet_hours():
+    """Check if current time is within quiet hours (00:00 - 06:00)."""
+    current_hour = datetime.now().hour
+    return QUIET_HOURS_START <= current_hour < QUIET_HOURS_END
+
+
 async def check_and_notify(context: ContextTypes.DEFAULT_TYPE):
     """Scheduled job to check for new apartments and notify users."""
     try:
         logger.info("=" * 50)
         logger.info(f"Starting apartment check at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
+        # Check quiet hours
+        if is_quiet_hours():
+            logger.info("Quiet hours (00:00-06:00) - skipping notifications")
+            logger.info("=" * 50)
+            return
+
         sent = load_sent()
         logger.info(f"Loaded {len(sent)} previously sent listings")
 
-        # Scrape all sources
-        listings = []
+        # Scrape all sources and keep them separate for per-source limiting
+        sources = {}
 
         logger.info("Scraping ArgenProp...")
-        listings.extend(scrape_argenprop(max_pages=5))
+        sources["argenprop"] = scrape_argenprop(max_pages=2)
 
         logger.info("Scraping ZonaProp...")
-        listings.extend(scrape_zonaprop(max_pages=5))
+        sources["zonaprop"] = scrape_zonaprop(max_pages=2)
 
         logger.info("Scraping MercadoLibre...")
-        listings.extend(scrape_mercadolibre(max_pages=5))
+        sources["mercadolibre"] = scrape_mercadolibre(max_pages=2)
 
-        logger.info(f"Found {len(listings)} total listings from all sources")
+        # Close browser after scraping to free memory
+        close_browser()
+
+        total = sum(len(v) for v in sources.values())
+        logger.info(f"Found {total} total listings from all sources")
 
         # Get all registered users
         user_ids = get_all_user_ids()
         logger.info(f"Checking for {len(user_ids)} registered users")
 
-        for ap in listings:
-            if ap["id"] in sent:
+        # Track how many we've sent per source per user
+        for user_id in user_ids:
+            config = get_user_config(user_id)
+            if not config.get("active", True):
                 continue
 
-            # Check each user's criteria
-            for user_id in user_ids:
-                config = get_user_config(user_id)
-                if not config.get("active", True):
-                    continue
+            # Process each source separately with a limit
+            for source_name, listings in sources.items():
+                sent_count = 0
 
-                if matches(ap, config):
-                    logger.info(f"Sending to user {user_id}: {ap['url']}")
-                    try:
-                        await send_telegram_message(context.bot, user_id, ap)
-                    except Exception as e:
-                        logger.error(f"Failed to send to user {user_id}: {e}")
+                for ap in listings:
+                    if sent_count >= MAX_LISTINGS_PER_SOURCE:
+                        break
 
-            sent.add(ap["id"])
+                    if ap["id"] in sent:
+                        continue
+
+                    if matches(ap, config):
+                        logger.info(f"Sending to user {user_id} from {source_name}: {ap['url']}")
+                        try:
+                            await send_telegram_message(context.bot, user_id, ap)
+                            sent_count += 1
+                        except Exception as e:
+                            logger.error(f"Failed to send to user {user_id}: {e}")
+
+                    # Mark as sent regardless of whether it matched (to avoid re-checking)
+                    sent.add(ap["id"])
 
         save_sent(sent)
         logger.info("=" * 50)
@@ -294,13 +380,27 @@ async def check_and_notify(context: ContextTypes.DEFAULT_TYPE):
         logger.error(f"Error in check_and_notify: {e}", exc_info=True)
 
 
+def format_number(value):
+    """Format number with thousands separator (dot for Argentina)."""
+    if value is None or value == 'N/A':
+        return 'N/A'
+    try:
+        return f"{int(value):,}".replace(",", ".")
+    except (ValueError, TypeError):
+        return str(value)
+
+
 async def send_telegram_message(bot, chat_id, ap):
     """Send apartment notification via bot."""
+    price = format_number(ap.get('price'))
+    expensas = format_number(ap.get('expensas'))
+    rooms = ap.get('rooms', 'N/A')
+
     text = (
-        "🏠 <b>Nuevo depto en alquiler (La Plata)</b>\n\n"
-        f"💲 Alquiler: ${ap.get('price', 'N/A'):,}\n"
-        f"🧾 Expensas: ${ap.get('expensas', 'N/A'):,}\n"
-        f"🛏 {ap.get('rooms', 'N/A')} ambientes\n\n"
+        f"🏠 <b>Nuevo depto en alquiler (La Plata)</b>\n\n"
+        f"💲 Alquiler: ${price}\n"
+        f"🧾 Expensas: ${expensas}\n"
+        f"🛏 {rooms} ambientes\n\n"
         f"🔗 {ap.get('url', '#')}"
     )
     await bot.send_message(chat_id=chat_id, text=text, parse_mode="HTML")
@@ -308,13 +408,14 @@ async def send_telegram_message(bot, chat_id, ap):
 
 def main():
     """Main function to run the bot."""
-    logger.info("🤖 Telegram Apartment Bot Starting...")
+    logger.info("Telegram Apartment Bot Starting...")
 
     # Create application
     application = Application.builder().token(TOKEN).build()
 
     # Add command handlers
     application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("run", run_manual_search))
 
     # Configuration conversation handler
     config_handler = ConversationHandler(
@@ -329,12 +430,18 @@ def main():
     )
     application.add_handler(config_handler)
 
-    # Schedule periodic apartment checks (every 30 minutes)
+    # Schedule periodic apartment checks (every 1 hour to save resources)
     job_queue = application.job_queue
-    job_queue.run_repeating(check_and_notify, interval=1800, first=10)
+    job_queue.run_repeating(check_and_notify, interval=3600, first=10)
 
     logger.info("Bot is running. Press Ctrl+C to stop.")
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+
+    try:
+        application.run_polling(allowed_updates=Update.ALL_TYPES)
+    finally:
+        # Cleanup browser on shutdown
+        logger.info("Shutting down, cleaning up browser...")
+        close_browser()
 
 
 if __name__ == "__main__":

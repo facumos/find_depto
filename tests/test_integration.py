@@ -227,8 +227,8 @@ class TestNotifierIntegration:
         message_text = call_args[1]["json"]["text"]
 
         # Verify all info is present
-        assert "450000" in message_text
-        assert "70000" in message_text
+        assert "450.000" in message_text
+        assert "70.000" in message_text
         assert "2 ambientes" in message_text
         assert "https://www.argenprop.com/depto-test" in message_text
         assert "Nuevo depto" in message_text

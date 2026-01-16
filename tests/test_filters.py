@@ -107,13 +107,13 @@ class TestMatches:
         assert matches(ap, criteria) is False
 
     def test_missing_expensas(self, criteria):
-        """A listing with None expensas should not match (conservative approach)."""
+        """A listing with None expensas should match (to include MercadoLibre listings)."""
         ap = {
             "price": 500000,
             "rooms": 2,
             "expensas": None
         }
-        assert matches(ap, criteria) is False
+        assert matches(ap, criteria) is True
 
     def test_max_rooms_constraint(self):
         """When max_rooms is set, listings above it should not match."""
