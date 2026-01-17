@@ -44,6 +44,12 @@ def _get_or_create_browser():
                 '--mute-audio',
                 '--no-first-run',
                 '--safebrowsing-disable-auto-update',
+                # Additional memory optimization flags
+                '--disable-software-rasterizer',
+                '--disable-features=TranslateUI',
+                '--disable-ipc-flooding-protection',
+                '--disable-renderer-backgrounding',
+                '--js-flags=--max-old-space-size=256',
             ]
         )
         logger.info("Browser launched successfully")
@@ -90,6 +96,12 @@ def get_browser() -> Browser:
                 '--mute-audio',
                 '--no-first-run',
                 '--safebrowsing-disable-auto-update',
+                # Additional memory optimization flags
+                '--disable-software-rasterizer',
+                '--disable-features=TranslateUI',
+                '--disable-ipc-flooding-protection',
+                '--disable-renderer-backgrounding',
+                '--js-flags=--max-old-space-size=256',
             ]
         )
         logger.info("Browser launched successfully")
@@ -104,7 +116,7 @@ def create_context() -> BrowserContext:
     """
     browser = get_browser()
     return browser.new_context(
-        viewport={"width": 1920, "height": 1080},
+        viewport={"width": 1280, "height": 720},  # Smaller viewport to save memory
         user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     )
 
