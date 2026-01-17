@@ -7,7 +7,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.argenprop.com"
-SEARCH_BASE = "https://www.argenprop.com/departamentos/alquiler/la-plata"
+# Order by most recent (orden-masnuevos) to get newest listings first
+# SEARCH_BASE = "https://www.argenprop.com/departamentos/alquiler/la-plata--orden-masnuevos"
+SEARCH_BASE = "https://www.argenprop.com/departamentos/alquiler/la-plata?orden-masnuevos"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -75,7 +77,7 @@ def parse_rooms(text):
     
     return None
 
-def scrape_argenprop(max_pages=5, delay=2, max_retries=3):
+def scrape_argenprop(max_pages=1, delay=2, max_retries=3):
     """
     Scrape apartment listings from ArgenProp.
     
@@ -131,6 +133,10 @@ def scrape_argenprop(max_pages=5, delay=2, max_retries=3):
                     link = link_elem["href"]
                     full_url = BASE_URL + link if link.startswith("/") else link
 
+                    # Extract ID from URL (e.g., "18809927" from "...-18809927")
+                    id_match = re.search(r'--(\d+)$', link)
+                    listing_id = id_match.group(1) if id_match else full_url
+
                     # Get the price element (contains both rent and expensas)
                     price_elem = card.select_one(".card__price")
                     if not price_elem:
@@ -151,11 +157,16 @@ def scrape_argenprop(max_pages=5, delay=2, max_retries=3):
                     # Parse rooms (handles both 'amb' and 'dorm')
                     rooms = parse_rooms(full_text)
 
+                    # Get address
+                    address_elem = card.select_one(".card__address, .card__title--primary")
+                    address = address_elem.get_text(strip=True) if address_elem else ""
+
                     listing = {
-                        "id": full_url,
+                        "id": f"argenprop_{listing_id}",
                         "price": price,
                         "rooms": rooms,
                         "expensas": expensas,
+                        "address": address,
                         "url": full_url,
                         "source": "argenprop"
                     }

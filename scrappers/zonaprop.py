@@ -6,7 +6,8 @@ from .browser_manager import create_context, run_in_browser_thread
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.zonaprop.com.ar"
-SEARCH_BASE = "https://www.zonaprop.com.ar/departamentos-alquiler-la-plata"
+# Order by most recent (orden-publicado-descendente) to get newest listings first
+SEARCH_BASE = "https://www.zonaprop.com.ar/departamentos-alquiler-la-plata-orden-publicado-descendente"
 
 
 def parse_price(text):
@@ -63,6 +64,7 @@ def parse_listing_from_text(card_text, url):
     price = None
     expensas = None
     rooms = None
+    address = None
 
     for line in lines:
         line = line.strip()
@@ -80,7 +82,13 @@ def parse_listing_from_text(card_text, url):
         if 'amb' in line.lower() and rooms is None:
             rooms = parse_rooms(line)
 
-    return price, expensas, rooms
+        # Parse address - look for La Plata or street patterns
+        if address is None and line and not line.startswith('$'):
+            # Address usually contains "La Plata" or street numbers
+            if 'la plata' in line.lower() or re.search(r'\b\d{1,2}\b.*\b\d{1,2}\b', line):
+                address = line
+
+    return price, expensas, rooms, address
 
 
 def _scrape_zonaprop_sync(max_pages, delay):
@@ -128,18 +136,23 @@ def _scrape_zonaprop_sync(max_pages, delay):
 
                         full_url = BASE_URL + href if href.startswith("/") else href
 
+                        # Extract ID from URL (e.g., "58127503" from "...58127503.html")
+                        id_match = re.search(r'-(\d+)\.html', full_url)
+                        listing_id = id_match.group(1) if id_match else full_url
+
                         # Parse from card text
                         card_text = card.inner_text()
-                        price, expensas, rooms = parse_listing_from_text(card_text, full_url)
+                        price, expensas, rooms, address = parse_listing_from_text(card_text, full_url)
 
                         if price is None:
                             continue
 
                         listing = {
-                            "id": full_url,
+                            "id": f"zonaprop_{listing_id}",
                             "price": price,
                             "rooms": rooms,
                             "expensas": expensas,
+                            "address": address or "",
                             "url": full_url,
                             "source": "zonaprop"
                         }
@@ -171,7 +184,7 @@ def _scrape_zonaprop_sync(max_pages, delay):
     return listings
 
 
-def scrape_zonaprop(max_pages=3, delay=3):
+def scrape_zonaprop(max_pages=1, delay=3):
     """
     Scrape apartment listings from ZonaProp using Playwright.
     Runs in a separate thread to avoid asyncio conflicts.

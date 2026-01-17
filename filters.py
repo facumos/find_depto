@@ -1,3 +1,6 @@
+from location_filter import filter_by_location
+
+
 def matches(ap, criteria):
     if ap["price"] is None or ap["rooms"] is None:
         return False
@@ -18,6 +21,10 @@ def matches(ap, criteria):
 
     # Check expensas only if available
     if ap["expensas"] is not None and ap["expensas"] > criteria["max_expensas"]:
+        return False
+
+    # Check location (casco urbano) - include if unknown
+    if not filter_by_location(ap, include_unknown=True):
         return False
 
     return True

@@ -4,8 +4,10 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "playwright install chromium && playwright install-deps chromium && python main.py",
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
+    "startCommand": "playwright install chromium && playwright install-deps chromium && python cron_job.py",
+    "restartPolicyType": "NEVER"
+  },
+  "cron": {
+    "schedule": "0 * * * *"
   }
 }

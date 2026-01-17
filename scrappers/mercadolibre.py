@@ -6,7 +6,8 @@ from .browser_manager import create_context, run_in_browser_thread
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://inmuebles.mercadolibre.com.ar"
-SEARCH_BASE = "https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/la-plata"
+# Order by most recent (_OrderId_BEGINS*DESC) to get newest listings first
+SEARCH_BASE = "https://inmuebles.mercadolibre.com.ar/departamentos/alquiler/la-plata_OrderId_BEGINS*DESC"
 
 
 def parse_price(text):
@@ -108,6 +109,10 @@ def _scrape_mercadolibre_sync(max_pages, delay):
                         if not full_url or "mercadolibre" not in full_url:
                             continue
 
+                        # Extract MLA ID for deduplication (URL contains tracking params that change)
+                        mla_match = re.search(r'(MLA-\d+)', full_url)
+                        listing_id = mla_match.group(1) if mla_match else full_url
+
                         # Get price - try multiple selectors
                         price_elem = card.query_selector('.andes-money-amount__fraction')
                         if not price_elem:
@@ -128,11 +133,25 @@ def _scrape_mercadolibre_sync(max_pages, delay):
                         # Get expensas (usually not in card, but try)
                         expensas = parse_expensas(card_text)
 
+                        # Get address/location
+                        address = ""
+                        location_elem = card.query_selector('.poly-component__location, .ui-search-item__location, [class*="location"]')
+                        if location_elem:
+                            address = location_elem.inner_text().strip()
+                        if not address:
+                            # Try to find La Plata or street patterns in card text
+                            for line in card_text.split('\n'):
+                                line = line.strip()
+                                if 'la plata' in line.lower() or re.search(r'\b\d{1,2}\b.*\b\d{1,2}\b', line):
+                                    address = line
+                                    break
+
                         listing = {
-                            "id": full_url,
+                            "id": f"mercadolibre_{listing_id}",
                             "price": price,
                             "rooms": rooms,
                             "expensas": expensas,
+                            "address": address,
                             "url": full_url,
                             "source": "mercadolibre"
                         }
@@ -164,7 +183,7 @@ def _scrape_mercadolibre_sync(max_pages, delay):
     return listings
 
 
-def scrape_mercadolibre(max_pages=3, delay=2):
+def scrape_mercadolibre(max_pages=1, delay=2):
     """
     Scrape apartment listings from MercadoLibre Inmuebles using Playwright.
     Runs in a separate thread to avoid asyncio conflicts.

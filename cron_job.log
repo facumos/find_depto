@@ -1,0 +1,389 @@
+2026-01-17 15:37:40,995 - INFO - ==================================================
+2026-01-17 15:37:40,996 - INFO - Cron job started at 2026-01-17 15:37:40
+2026-01-17 15:37:40,997 - INFO - Loaded 1255 previously sent listings
+2026-01-17 15:37:40,997 - INFO - Scraping all sources...
+2026-01-17 15:37:40,997 - INFO -   - ArgenProp...
+2026-01-17 15:37:44,561 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:37:44,563 - INFO -   - ZonaProp...
+2026-01-17 15:37:44,564 - INFO - Launching shared Chromium browser...
+2026-01-17 15:37:45,290 - INFO - Browser launched successfully
+2026-01-17 15:37:50,056 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:37:50,056 - INFO -   - MercadoLibre...
+2026-01-17 15:37:58,305 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:37:58,356 - INFO - Browser closed
+2026-01-17 15:37:58,368 - INFO - Playwright stopped
+2026-01-17 15:37:58,368 - INFO -   - Inmobusqueda...
+2026-01-17 15:37:59,577 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:37:59,578 - INFO - Found 114 total listings
+2026-01-17 15:37:59,579 - INFO - Found 54 NEW apartments
+2026-01-17 15:37:59,579 - INFO - Notifying 2 users
+2026-01-17 15:37:59,581 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-de-1-dormitorio-c-terraza-la-plata-58127503.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=14
+2026-01-17 15:38:00,595 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=eda95a15-e6e3-4d1a-ae8d-235178854955
+2026-01-17 15:38:01,593 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=eda95a15-e6e3-4d1a-ae8d-235178854955
+2026-01-17 15:38:02,612 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-de-1-dormitorio-c-terraza-la-plata-58127503.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=14
+2026-01-17 15:38:03,658 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=eda95a15-e6e3-4d1a-ae8d-235178854955
+2026-01-17 15:38:04,571 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=eda95a15-e6e3-4d1a-ae8d-235178854955
+2026-01-17 15:38:05,519 - INFO - Sent 6 notifications
+2026-01-17 15:38:05,520 - INFO - ==================================================
+2026-01-17 15:39:42,651 - INFO - ==================================================
+2026-01-17 15:39:42,651 - INFO - Cron job started at 2026-01-17 15:39:42
+2026-01-17 15:39:42,652 - INFO - Loaded 1309 previously sent listings
+2026-01-17 15:39:42,652 - INFO - Scraping all sources...
+2026-01-17 15:39:42,653 - INFO -   - ArgenProp...
+2026-01-17 15:39:44,966 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:39:44,967 - INFO -   - ZonaProp...
+2026-01-17 15:39:44,968 - INFO - Launching shared Chromium browser...
+2026-01-17 15:39:45,498 - INFO - Browser launched successfully
+2026-01-17 15:39:50,397 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:39:50,399 - INFO -   - MercadoLibre...
+2026-01-17 15:39:58,624 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:39:58,670 - INFO - Browser closed
+2026-01-17 15:39:58,685 - INFO - Playwright stopped
+2026-01-17 15:39:58,685 - INFO -   - Inmobusqueda...
+2026-01-17 15:39:59,782 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:39:59,783 - INFO - Found 114 total listings
+2026-01-17 15:39:59,784 - INFO - Found 48 NEW apartments
+2026-01-17 15:39:59,784 - INFO - Notifying 2 users
+2026-01-17 15:39:59,785 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=c757beb7-63e7-426a-996f-3c9430c0a095
+2026-01-17 15:40:00,764 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=c757beb7-63e7-426a-996f-3c9430c0a095
+2026-01-17 15:40:01,837 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=c757beb7-63e7-426a-996f-3c9430c0a095
+2026-01-17 15:40:02,863 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=c757beb7-63e7-426a-996f-3c9430c0a095
+2026-01-17 15:40:03,892 - INFO - Sent 4 notifications
+2026-01-17 15:40:03,893 - INFO - ==================================================
+2026-01-17 15:40:09,717 - INFO - ==================================================
+2026-01-17 15:40:09,717 - INFO - Cron job started at 2026-01-17 15:40:09
+2026-01-17 15:40:09,718 - INFO - Loaded 1357 previously sent listings
+2026-01-17 15:40:09,718 - INFO - Scraping all sources...
+2026-01-17 15:40:09,718 - INFO -   - ArgenProp...
+2026-01-17 15:40:12,019 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:40:12,021 - INFO -   - ZonaProp...
+2026-01-17 15:40:12,021 - INFO - Launching shared Chromium browser...
+2026-01-17 15:40:12,552 - INFO - Browser launched successfully
+2026-01-17 15:40:17,418 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:40:17,419 - INFO -   - MercadoLibre...
+2026-01-17 15:40:25,856 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:40:25,893 - INFO - Browser closed
+2026-01-17 15:40:25,906 - INFO - Playwright stopped
+2026-01-17 15:40:25,907 - INFO -   - Inmobusqueda...
+2026-01-17 15:40:27,067 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:40:27,069 - INFO - Found 114 total listings
+2026-01-17 15:40:27,069 - INFO - Found 48 NEW apartments
+2026-01-17 15:40:27,070 - INFO - Notifying 2 users
+2026-01-17 15:40:27,071 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=659ce2cc-8b57-40d6-b3eb-d7b66e079ed1
+2026-01-17 15:40:27,995 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=659ce2cc-8b57-40d6-b3eb-d7b66e079ed1
+2026-01-17 15:40:28,956 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=659ce2cc-8b57-40d6-b3eb-d7b66e079ed1
+2026-01-17 15:40:30,100 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=659ce2cc-8b57-40d6-b3eb-d7b66e079ed1
+2026-01-17 15:40:31,114 - INFO - Sent 4 notifications
+2026-01-17 15:40:31,114 - INFO - ==================================================
+2026-01-17 15:41:44,779 - INFO - ==================================================
+2026-01-17 15:41:44,780 - INFO - Cron job started at 2026-01-17 15:41:44
+2026-01-17 15:41:44,781 - INFO - Loaded 1405 previously sent listings
+2026-01-17 15:41:44,781 - INFO - Scraping all sources...
+2026-01-17 15:41:44,781 - INFO -   - ArgenProp...
+2026-01-17 15:41:47,069 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:41:47,070 - INFO -   - ZonaProp...
+2026-01-17 15:41:47,071 - INFO - Launching shared Chromium browser...
+2026-01-17 15:41:47,600 - INFO - Browser launched successfully
+2026-01-17 15:41:52,587 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:41:52,589 - INFO -   - MercadoLibre...
+2026-01-17 15:42:00,781 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:42:00,829 - INFO - Browser closed
+2026-01-17 15:42:00,847 - INFO - Playwright stopped
+2026-01-17 15:42:00,847 - INFO -   - Inmobusqueda...
+2026-01-17 15:42:01,959 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:42:01,961 - INFO - Found 114 total listings
+2026-01-17 15:42:01,961 - INFO - Found 94 NEW apartments
+2026-01-17 15:42:01,961 - INFO - Notifying 2 users
+2026-01-17 15:42:01,962 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:42:03,081 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:42:04,079 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=2
+2026-01-17 15:42:05,131 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:42:06,128 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=1ec7c31b-263b-4cc5-8958-b12fd95c6df6
+2026-01-17 15:42:07,178 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=1ec7c31b-263b-4cc5-8958-b12fd95c6df6
+2026-01-17 15:42:08,194 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:42:09,190 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:42:10,237 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=2
+2026-01-17 15:42:11,195 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:42:12,300 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=1ec7c31b-263b-4cc5-8958-b12fd95c6df6
+2026-01-17 15:42:13,308 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=1ec7c31b-263b-4cc5-8958-b12fd95c6df6
+2026-01-17 15:42:14,256 - INFO - Sent 12 notifications
+2026-01-17 15:42:14,256 - INFO - ==================================================
+2026-01-17 15:42:18,985 - INFO - ==================================================
+2026-01-17 15:42:18,986 - INFO - Cron job started at 2026-01-17 15:42:18
+2026-01-17 15:42:18,987 - INFO - Loaded 1499 previously sent listings
+2026-01-17 15:42:18,987 - INFO - Scraping all sources...
+2026-01-17 15:42:18,987 - INFO -   - ArgenProp...
+2026-01-17 15:42:21,281 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:42:21,282 - INFO -   - ZonaProp...
+2026-01-17 15:42:21,283 - INFO - Launching shared Chromium browser...
+2026-01-17 15:42:21,821 - INFO - Browser launched successfully
+2026-01-17 15:42:26,560 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:42:26,561 - INFO -   - MercadoLibre...
+2026-01-17 15:42:34,747 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:42:34,787 - INFO - Browser closed
+2026-01-17 15:42:34,801 - INFO - Playwright stopped
+2026-01-17 15:42:34,801 - INFO -   - Inmobusqueda...
+2026-01-17 15:42:35,973 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:42:35,975 - INFO - Found 114 total listings
+2026-01-17 15:42:35,976 - INFO - Found 0 NEW apartments
+2026-01-17 15:42:35,976 - INFO - No new apartments to notify
+2026-01-17 15:42:36,009 - INFO - ==================================================
+2026-01-17 15:47:57,715 - INFO - ==================================================
+2026-01-17 15:47:57,715 - INFO - Cron job started at 2026-01-17 15:47:57
+2026-01-17 15:47:57,715 - INFO - Loaded 0 previously sent listings
+2026-01-17 15:47:57,715 - INFO - Loaded 0 apartments in queue
+2026-01-17 15:47:57,716 - INFO - Scraping all sources...
+2026-01-17 15:47:57,716 - INFO -   - ArgenProp...
+2026-01-17 15:48:00,508 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:48:00,509 - INFO -   - ZonaProp...
+2026-01-17 15:48:00,510 - INFO - Launching shared Chromium browser...
+2026-01-17 15:48:01,011 - INFO - Browser launched successfully
+2026-01-17 15:48:06,172 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:48:06,173 - INFO -   - MercadoLibre...
+2026-01-17 15:48:14,143 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:48:14,178 - INFO - Browser closed
+2026-01-17 15:48:14,189 - INFO - Playwright stopped
+2026-01-17 15:48:14,189 - INFO -   - Inmobusqueda...
+2026-01-17 15:48:15,409 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:48:15,411 - INFO - Found 114 total listings
+2026-01-17 15:48:15,411 - INFO - Found 114 NEW apartments
+2026-01-17 15:48:15,411 - INFO - Processing for 2 users
+2026-01-17 15:48:15,414 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:48:16,413 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:48:17,447 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:48:18,486 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4
+2026-01-17 15:48:19,487 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:48:20,507 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:48:21,434 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=1568486884
+2026-01-17 15:48:22,460 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=1097982607
+2026-01-17 15:48:23,480 - INFO - User 1416589926: 21 apartments queued for next hour
+2026-01-17 15:48:23,485 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:48:24,613 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:48:25,631 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-monoambiente-en-alquiler-1-bano-la-58132798.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=1
+2026-01-17 15:48:26,658 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:48:27,806 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:48:28,829 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:48:29,844 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=1568486884
+2026-01-17 15:48:30,878 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=519434&pos=3&ppv=71001&lp=0&hash=d0633fb29c87ac4e30266af5ce01c1ef091120a7&rd=1051993998
+2026-01-17 15:48:31,902 - INFO - User 8588585964: 41 apartments queued for next hour
+2026-01-17 15:48:31,938 - INFO - Sent 16 notifications, 62 in queue
+2026-01-17 15:48:31,938 - INFO - ==================================================
+2026-01-17 15:48:36,727 - INFO - ==================================================
+2026-01-17 15:48:36,727 - INFO - Cron job started at 2026-01-17 15:48:36
+2026-01-17 15:48:36,728 - INFO - Loaded 114 previously sent listings
+2026-01-17 15:48:36,728 - INFO - Loaded 62 apartments in queue
+2026-01-17 15:48:36,728 - INFO - Scraping all sources...
+2026-01-17 15:48:36,728 - INFO -   - ArgenProp...
+2026-01-17 15:48:39,024 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:48:39,025 - INFO -   - ZonaProp...
+2026-01-17 15:48:39,025 - INFO - Launching shared Chromium browser...
+2026-01-17 15:48:39,527 - INFO - Browser launched successfully
+2026-01-17 15:48:44,135 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:48:44,137 - INFO -   - MercadoLibre...
+2026-01-17 15:48:52,051 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:48:52,104 - INFO - Browser closed
+2026-01-17 15:48:52,116 - INFO - Playwright stopped
+2026-01-17 15:48:52,116 - INFO -   - Inmobusqueda...
+2026-01-17 15:48:53,587 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:48:53,589 - INFO - Found 114 total listings
+2026-01-17 15:48:53,590 - INFO - Found 0 NEW apartments
+2026-01-17 15:48:53,590 - INFO - Processing for 2 users
+2026-01-17 15:48:53,590 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-3-ambientes--18810486
+2026-01-17 15:48:54,670 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18870799
+2026-01-17 15:48:55,674 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-la-plata-58128017.html?n_src=Listado&n_pg=1&n_pos=14
+2026-01-17 15:48:56,760 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-de-1-dormitorio-c-terraza-la-plata-58127503.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=15
+2026-01-17 15:48:57,911 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-1646947711-departamento-en-alquiler-en-la-plata-1-dormi-piso-5-_JM#polycard_client=search-desktop&search_layout=grid&position=10&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:48:58,935 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-1647164989-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=14&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:48:59,965 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha-519863
+2026-01-17 15:49:00,984 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha-519661
+2026-01-17 15:49:01,981 - INFO - User 1416589926: 13 apartments queued for next hour
+2026-01-17 15:49:01,981 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-3-ambientes--18810486
+2026-01-17 15:49:03,135 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18870799
+2026-01-17 15:49:04,115 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4
+2026-01-17 15:49:05,284 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-la-plata-58128017.html?n_src=Listado&n_pg=1&n_pos=14
+2026-01-17 15:49:06,308 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-1646947711-departamento-en-alquiler-en-la-plata-1-dormi-piso-5-_JM#polycard_client=search-desktop&search_layout=grid&position=10&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:49:07,325 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-1647164989-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=14&type=item&tracking_id=1f3ac820-cb42-4bc5-8b62-79f847ce07de
+2026-01-17 15:49:08,264 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=1097982607
+2026-01-17 15:49:09,196 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha-519452
+2026-01-17 15:49:10,190 - INFO - User 8588585964: 33 apartments queued for next hour
+2026-01-17 15:49:10,221 - INFO - Sent 16 notifications, 46 in queue
+2026-01-17 15:49:10,222 - INFO - ==================================================
+2026-01-17 15:52:02,992 - INFO - ==================================================
+2026-01-17 15:52:02,992 - INFO - Cron job started at 2026-01-17 15:52:02
+2026-01-17 15:52:02,993 - INFO - Loaded 0 previously sent listings
+2026-01-17 15:52:02,993 - INFO - Loaded 0 apartments in queue
+2026-01-17 15:52:02,993 - INFO - Scraping all sources...
+2026-01-17 15:52:02,993 - INFO -   - ArgenProp...
+2026-01-17 15:52:05,329 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:52:05,330 - INFO -   - ZonaProp...
+2026-01-17 15:52:05,331 - INFO - Launching shared Chromium browser...
+2026-01-17 15:52:05,873 - INFO - Browser launched successfully
+2026-01-17 15:52:10,841 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:52:10,841 - INFO -   - MercadoLibre...
+2026-01-17 15:52:19,191 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:52:19,231 - INFO - Browser closed
+2026-01-17 15:52:19,243 - INFO - Playwright stopped
+2026-01-17 15:52:19,244 - INFO -   - Inmobusqueda...
+2026-01-17 15:52:20,453 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:52:20,454 - INFO - Found 114 total listings
+2026-01-17 15:52:20,455 - INFO - Found 114 NEW apartments
+2026-01-17 15:52:20,455 - INFO - Processing for 2 users
+2026-01-17 15:52:20,455 - INFO - Sending 8 apartments to 2 users
+2026-01-17 15:52:20,457 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:52:21,452 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=337395601
+2026-01-17 15:52:22,510 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:52:23,638 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-monoambiente-en-alquiler-1-bano-la-58132798.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=1
+2026-01-17 15:52:24,662 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=337395601
+2026-01-17 15:52:25,673 - INFO - 106 apartments queued for next hour
+2026-01-17 15:52:25,695 - INFO - Sent 5 notifications, 106 in queue
+2026-01-17 15:52:25,695 - INFO - ==================================================
+2026-01-17 15:52:30,666 - INFO - ==================================================
+2026-01-17 15:52:30,666 - INFO - Cron job started at 2026-01-17 15:52:30
+2026-01-17 15:52:30,667 - INFO - Loaded 114 previously sent listings
+2026-01-17 15:52:30,667 - INFO - Loaded 106 apartments in queue
+2026-01-17 15:52:30,667 - INFO - Scraping all sources...
+2026-01-17 15:52:30,667 - INFO -   - ArgenProp...
+2026-01-17 15:52:32,940 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:52:32,941 - INFO -   - ZonaProp...
+2026-01-17 15:52:32,942 - INFO - Launching shared Chromium browser...
+2026-01-17 15:52:33,489 - INFO - Browser launched successfully
+2026-01-17 15:52:38,438 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:52:38,440 - INFO -   - MercadoLibre...
+2026-01-17 15:52:46,604 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:52:46,650 - INFO - Browser closed
+2026-01-17 15:52:46,668 - INFO - Playwright stopped
+2026-01-17 15:52:46,669 - INFO -   - Inmobusqueda...
+2026-01-17 15:52:48,236 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:52:48,238 - INFO - Found 114 total listings
+2026-01-17 15:52:48,238 - INFO - Found 0 NEW apartments
+2026-01-17 15:52:48,238 - INFO - Processing for 2 users
+2026-01-17 15:52:48,238 - INFO - Sending 8 apartments to 2 users
+2026-01-17 15:52:48,240 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:52:49,238 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:52:50,242 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4
+2026-01-17 15:52:51,153 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=9649c7de-954a-4d28-bf69-994ab0c99b81
+2026-01-17 15:52:52,085 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=1631924298
+2026-01-17 15:52:52,976 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:52:53,947 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:52:54,953 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4
+2026-01-17 15:52:55,938 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=9649c7de-954a-4d28-bf69-994ab0c99b81
+2026-01-17 15:52:56,886 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=519434&pos=3&ppv=71001&lp=0&hash=d0633fb29c87ac4e30266af5ce01c1ef091120a7&rd=1872448401
+2026-01-17 15:52:57,934 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=1631924298
+2026-01-17 15:52:59,068 - INFO - 98 apartments queued for next hour
+2026-01-17 15:52:59,117 - INFO - Sent 11 notifications, 98 in queue
+2026-01-17 15:52:59,117 - INFO - ==================================================
+2026-01-17 15:55:56,653 - INFO - ==================================================
+2026-01-17 15:55:56,653 - INFO - Cron job started at 2026-01-17 15:55:56
+2026-01-17 15:55:56,654 - INFO - Loaded 0 previously sent listings
+2026-01-17 15:55:56,654 - INFO - Loaded 0 apartments in queue
+2026-01-17 15:55:56,654 - INFO - Scraping all sources...
+2026-01-17 15:55:56,654 - INFO -   - ArgenProp...
+2026-01-17 15:55:59,646 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:55:59,647 - INFO -   - ZonaProp...
+2026-01-17 15:55:59,648 - INFO - Launching shared Chromium browser...
+2026-01-17 15:56:00,189 - INFO - Browser launched successfully
+2026-01-17 15:56:05,186 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:56:05,187 - INFO -   - MercadoLibre...
+2026-01-17 15:56:13,527 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:56:13,580 - INFO - Browser closed
+2026-01-17 15:56:13,595 - INFO - Playwright stopped
+2026-01-17 15:56:13,595 - INFO -   - Inmobusqueda...
+2026-01-17 15:56:14,688 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:56:14,690 - INFO - Found 114 total listings
+2026-01-17 15:56:14,691 - INFO - Found 114 NEW apartments
+2026-01-17 15:56:14,708 - INFO - Processing for 2 users
+2026-01-17 15:56:14,708 - INFO - Sending 8 apartments to 2 users
+2026-01-17 15:56:14,710 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:56:15,932 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=1989581593
+2026-01-17 15:56:16,890 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 15:56:18,010 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-monoambiente-en-alquiler-1-bano-la-58132798.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=1
+2026-01-17 15:56:19,017 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=1989581593
+2026-01-17 15:56:20,083 - INFO - 106 apartments queued for next hour
+2026-01-17 15:56:20,131 - INFO - Sent 5 notifications, 106 in queue
+2026-01-17 15:56:20,132 - INFO - ==================================================
+2026-01-17 15:56:24,402 - INFO - ==================================================
+2026-01-17 15:56:24,402 - INFO - Cron job started at 2026-01-17 15:56:24
+2026-01-17 15:56:24,403 - INFO - Loaded 114 previously sent listings
+2026-01-17 15:56:24,403 - INFO - Loaded 106 apartments in queue
+2026-01-17 15:56:24,403 - INFO - Scraping all sources...
+2026-01-17 15:56:24,403 - INFO -   - ArgenProp...
+2026-01-17 15:56:26,702 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 15:56:26,704 - INFO -   - ZonaProp...
+2026-01-17 15:56:26,705 - INFO - Launching shared Chromium browser...
+2026-01-17 15:56:27,377 - INFO - Browser launched successfully
+2026-01-17 15:56:32,294 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 15:56:32,295 - INFO -   - MercadoLibre...
+2026-01-17 15:56:40,567 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 15:56:40,624 - INFO - Browser closed
+2026-01-17 15:56:40,649 - INFO - Playwright stopped
+2026-01-17 15:56:40,650 - INFO -   - Inmobusqueda...
+2026-01-17 15:56:41,792 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 15:56:41,794 - INFO - Found 114 total listings
+2026-01-17 15:56:41,795 - INFO - Found 0 NEW apartments
+2026-01-17 15:56:41,795 - INFO - Processing for 2 users
+2026-01-17 15:56:41,795 - INFO - Sending 8 apartments to 2 users
+2026-01-17 15:56:41,796 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:56:42,784 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:56:43,690 - INFO - Sending to 1416589926: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4
+2026-01-17 15:56:44,650 - INFO - Sending to 1416589926: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=83b4451e-8657-41e3-a1b2-768370db9003
+2026-01-17 15:56:45,645 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=2133704145
+2026-01-17 15:56:46,709 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875100
+2026-01-17 15:56:47,703 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=3
+2026-01-17 15:56:48,756 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=4
+2026-01-17 15:56:49,781 - INFO - Sending to 8588585964: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=3&type=item&tracking_id=83b4451e-8657-41e3-a1b2-768370db9003
+2026-01-17 15:56:50,773 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=519434&pos=3&ppv=71001&lp=0&hash=d0633fb29c87ac4e30266af5ce01c1ef091120a7&rd=2056070572
+2026-01-17 15:56:51,782 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=2133704145
+2026-01-17 15:56:52,689 - INFO - 98 apartments queued for next hour
+2026-01-17 15:56:52,710 - INFO - Sent 11 notifications, 98 in queue
+2026-01-17 15:56:52,711 - INFO - ==================================================
+2026-01-17 16:00:29,679 - INFO - ==================================================
+2026-01-17 16:00:29,679 - INFO - Cron job started at 2026-01-17 16:00:29
+2026-01-17 16:00:29,680 - INFO - Loaded 0 previously sent listings
+2026-01-17 16:00:29,680 - INFO - Loaded 0 apartments in queue
+2026-01-17 16:00:29,680 - INFO - Scraping all sources...
+2026-01-17 16:00:29,680 - INFO -   - ArgenProp...
+2026-01-17 16:00:31,993 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 16:00:31,994 - INFO -   - ZonaProp...
+2026-01-17 16:00:31,994 - INFO - Launching shared Chromium browser...
+2026-01-17 16:00:32,540 - INFO - Browser launched successfully
+2026-01-17 16:00:38,087 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 16:00:38,088 - INFO -   - MercadoLibre...
+2026-01-17 16:00:46,526 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 16:00:46,562 - INFO - Browser closed
+2026-01-17 16:00:46,575 - INFO - Playwright stopped
+2026-01-17 16:00:46,575 - INFO -   - Inmobusqueda...
+2026-01-17 16:00:47,689 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 16:00:47,691 - INFO - Found 114 total listings
+2026-01-17 16:00:47,691 - INFO - Found 114 NEW apartments
+2026-01-17 16:00:47,691 - INFO - Processing for 2 users
+2026-01-17 16:00:47,691 - INFO - Sending 8 apartments to 2 users
+2026-01-17 16:00:47,693 - INFO - Sending to 1416589926: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 16:00:48,746 - INFO - Sending to 1416589926: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=1466775643
+2026-01-17 16:00:49,912 - INFO - Sending to 8588585964: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18875101
+2026-01-17 16:00:50,937 - INFO - Sending to 8588585964: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-monoambiente-en-alquiler-1-bano-la-58132798.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=1
+2026-01-17 16:00:51,919 - INFO - Sending to 8588585964: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=1466775643
+2026-01-17 16:00:52,835 - INFO - 106 apartments queued for next hour
+2026-01-17 16:00:52,886 - INFO - Sent 5 notifications, 106 in queue
+2026-01-17 16:00:52,886 - INFO - ==================================================
+2026-01-17 16:00:57,830 - INFO - ==================================================
+2026-01-17 16:00:57,830 - INFO - Cron job started at 2026-01-17 16:00:57
+2026-01-17 16:00:57,832 - INFO - Loaded 114 previously sent listings
+2026-01-17 16:00:57,832 - INFO - Loaded 106 apartments in queue
+2026-01-17 16:00:57,832 - INFO - Scraping all sources...
+2026-01-17 16:00:57,832 - INFO -   - ArgenProp...
+2026-01-17 16:01:00,593 - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-17 16:01:00,594 - INFO -   - ZonaProp...
+2026-01-17 16:01:00,595 - INFO - Launching shared Chromium browser...
+2026-01-17 16:01:01,130 - INFO - Browser launched successfully
+2026-01-17 16:01:06,108 - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-17 16:01:06,110 - INFO -   - MercadoLibre...
+2026-01-17 16:01:13,477 - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-17 16:01:13,515 - INFO - Browser closed
+2026-01-17 16:01:13,540 - INFO - Playwright stopped
+2026-01-17 16:01:13,540 - INFO -   - Inmobusqueda...
+2026-01-17 16:01:14,620 - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-17 16:01:14,621 - INFO - Found 114 total listings
+2026-01-17 16:01:14,622 - INFO - Found 0 NEW apartments
+2026-01-17 16:01:14,622 - INFO - Processing for 2 users
+2026-01-17 16:01:14,623 - INFO - No apartments to send
+2026-01-17 16:01:14,655 - INFO - ==================================================

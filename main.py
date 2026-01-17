@@ -9,6 +9,7 @@ from telegram.ext import (
 from scrappers.argenprop import scrape_argenprop
 from scrappers.zonaprop import scrape_zonaprop
 from scrappers.mercadolibre import scrape_mercadolibre
+from scrappers.inmobusqueda import scrape_inmobusqueda
 from scrappers.browser_manager import close_browser
 from filters import matches
 from notifier import send_message
@@ -54,9 +55,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"🧾 Expensas máximas: ${config['max_expensas']:,}\n\n"
         "<b>Comandos disponibles:</b>\n"
         "/config - Modificar tus filtros de búsqueda\n"
-        "/run - Buscar departamentos ahora (muestra 3 resultados)\n"
+        "/run - Buscar departamentos ahora (1 por fuente)\n"
         "/start - Ver este mensaje de ayuda\n\n"
-        "📬 Recibirás notificaciones automáticas cada hora con nuevos departamentos.",
+        "📬 Recibirás notificaciones automáticas cada hora (máx. 4 mensajes).",
         parse_mode="HTML"
     )
 
@@ -248,44 +249,64 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def run_manual_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handle /run command - manually search and send latest 3 matching listings."""
+    """Handle /run command - manually search and send 1 NEW listing per source (max 4)."""
     user_id = update.effective_user.id
     config = get_user_config(user_id)
 
     await update.message.reply_text(
-        "🔍 Buscando departamentos...\nEsto puede tardar unos segundos."
+        "🔍 Buscando departamentos nuevos...\nEsto puede tardar unos segundos."
     )
 
     try:
-        # Scrape all sources (fewer pages for speed)
-        listings = []
-        listings.extend(scrape_argenprop(max_pages=2))
-        listings.extend(scrape_zonaprop(max_pages=2))
-        listings.extend(scrape_mercadolibre(max_pages=2))
+        # Load previously seen apartments
+        sent = load_sent()
 
-        # Filter by user criteria
-        matching = [ap for ap in listings if matches(ap, config)]
+        # Scrape all sources (1 page each, sorted by most recent)
+        sources = {
+            "argenprop": scrape_argenprop(),
+            "zonaprop": scrape_zonaprop(),
+            "mercadolibre": scrape_mercadolibre(),
+        }
 
-        if not matching:
+        # Close browser after Playwright-based scraping
+        close_browser()
+
+        # Add Inmobusqueda (uses requests, not Playwright)
+        sources["inmobusqueda"] = scrape_inmobusqueda()
+
+        # Get first NEW matching listing from each source
+        results = []
+
+        for source_name, listings in sources.items():
+            for ap in listings:
+                if ap["id"] in sent:
+                    continue  # Skip already seen apartments
+                if matches(ap, config):
+                    results.append(ap)
+                    sent.add(ap["id"])  # Mark as seen
+                    break  # Only 1 per source
+
+        if not results:
             await update.message.reply_text(
-                "😕 No encontré departamentos que coincidan con tus filtros.\n\n"
+                "😕 No encontré departamentos <b>nuevos</b> que coincidan con tus filtros.\n\n"
                 f"<b>Tus filtros actuales:</b>\n"
                 f"💲 Precio máximo: ${config['max_price']:,}\n"
                 f"🛏 Ambientes mínimos: {config['min_rooms']}\n"
                 f"🧾 Expensas máximas: ${config['max_expensas']:,}\n\n"
-                "Usa /config para modificar tus filtros.",
+                "Los departamentos ya vistos no se muestran de nuevo.",
                 parse_mode="HTML"
             )
             return
 
-        # Send the latest 3 (listings are already in order from scraping)
-        count = min(3, len(matching))
         await update.message.reply_text(
-            f"✅ Encontré {len(matching)} departamentos. Te muestro los últimos {count}:"
+            f"✅ Encontré {len(results)} departamento(s) nuevo(s). Te muestro uno de cada fuente:"
         )
 
-        for ap in matching[:count]:
+        for ap in results:
             await send_telegram_message(context.bot, user_id, ap)
+
+        # Save the updated sent set
+        save_sent(sent)
 
     except Exception as e:
         logger.error(f"Error in run_manual_search: {e}", exc_info=True)
@@ -294,12 +315,12 @@ async def run_manual_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 
-# Maximum listings to send per source per cycle (to avoid flooding)
-MAX_LISTINGS_PER_SOURCE = 3
+# Maximum listings to send per source per cycle (2 per source = max 8 messages/hour)
+MAX_LISTINGS_PER_SOURCE = 2
 
 # Quiet hours - don't send notifications between these hours (0-23)
 QUIET_HOURS_START = 0   # midnight
-QUIET_HOURS_END = 6     # 6 AM
+QUIET_HOURS_END = 8     # 8 AM
 
 
 def is_quiet_hours():
@@ -326,17 +347,21 @@ async def check_and_notify(context: ContextTypes.DEFAULT_TYPE):
         # Scrape all sources and keep them separate for per-source limiting
         sources = {}
 
+        # Scrape all sources (1 page each by default, sorted by most recent)
         logger.info("Scraping ArgenProp...")
-        sources["argenprop"] = scrape_argenprop(max_pages=2)
+        sources["argenprop"] = scrape_argenprop()
 
         logger.info("Scraping ZonaProp...")
-        sources["zonaprop"] = scrape_zonaprop(max_pages=2)
+        sources["zonaprop"] = scrape_zonaprop()
 
         logger.info("Scraping MercadoLibre...")
-        sources["mercadolibre"] = scrape_mercadolibre(max_pages=2)
+        sources["mercadolibre"] = scrape_mercadolibre()
 
-        # Close browser after scraping to free memory
+        # Close browser after Playwright-based scraping to free memory
         close_browser()
+
+        logger.info("Scraping Inmobusqueda...")
+        sources["inmobusqueda"] = scrape_inmobusqueda()
 
         total = sum(len(v) for v in sources.values())
         logger.info(f"Found {total} total listings from all sources")
@@ -345,33 +370,36 @@ async def check_and_notify(context: ContextTypes.DEFAULT_TYPE):
         user_ids = get_all_user_ids()
         logger.info(f"Checking for {len(user_ids)} registered users")
 
-        # Track how many we've sent per source per user
+        # First, mark ALL scraped apartments as seen (to prevent re-checking non-matching ones)
+        new_apartments = []
+        for source_name, listings in sources.items():
+            for ap in listings:
+                if ap["id"] not in sent:
+                    sent.add(ap["id"])
+                    new_apartments.append(ap)
+
+        logger.info(f"Found {len(new_apartments)} new apartments (not seen before)")
+
+        # Now process only new apartments for each user
         for user_id in user_ids:
             config = get_user_config(user_id)
             if not config.get("active", True):
                 continue
 
-            # Process each source separately with a limit
-            for source_name, listings in sources.items():
-                sent_count = 0
+            # Group new apartments by source and apply per-source limit
+            source_counts = {}
+            for ap in new_apartments:
+                source_name = ap.get("source", "unknown")
+                if source_counts.get(source_name, 0) >= MAX_LISTINGS_PER_SOURCE:
+                    continue
 
-                for ap in listings:
-                    if sent_count >= MAX_LISTINGS_PER_SOURCE:
-                        break
-
-                    if ap["id"] in sent:
-                        continue
-
-                    if matches(ap, config):
-                        logger.info(f"Sending to user {user_id} from {source_name}: {ap['url']}")
-                        try:
-                            await send_telegram_message(context.bot, user_id, ap)
-                            sent_count += 1
-                        except Exception as e:
-                            logger.error(f"Failed to send to user {user_id}: {e}")
-
-                    # Mark as sent regardless of whether it matched (to avoid re-checking)
-                    sent.add(ap["id"])
+                if matches(ap, config):
+                    logger.info(f"Sending to user {user_id} from {source_name}: {ap['url']}")
+                    try:
+                        await send_telegram_message(context.bot, user_id, ap)
+                        source_counts[source_name] = source_counts.get(source_name, 0) + 1
+                    except Exception as e:
+                        logger.error(f"Failed to send to user {user_id}: {e}")
 
         save_sent(sent)
         logger.info("=" * 50)
@@ -415,20 +443,20 @@ def main():
 
     # Add command handlers
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("run", run_manual_search))
+    # application.add_handler(CommandHandler("run", run_manual_search))  # Disabled - only hourly notifications
 
-    # Configuration conversation handler
-    config_handler = ConversationHandler(
-        entry_points=[CommandHandler("config", config_start)],
-        states={
-            CHOOSING: [MessageHandler(filters.TEXT & ~filters.COMMAND, choice_handler)],
-            SET_MAX_PRICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, set_max_price)],
-            SET_MIN_ROOMS: [MessageHandler(filters.TEXT & ~filters.COMMAND, set_min_rooms)],
-            SET_MAX_EXPENSAS: [MessageHandler(filters.TEXT & ~filters.COMMAND, set_max_expensas)],
-        },
-        fallbacks=[CommandHandler("cancel", cancel)],
-    )
-    application.add_handler(config_handler)
+    # Configuration conversation handler (disabled - filter modification via Telegram turned off)
+    # config_handler = ConversationHandler(
+    #     entry_points=[CommandHandler("config", config_start)],
+    #     states={
+    #         CHOOSING: [MessageHandler(filters.TEXT & ~filters.COMMAND, choice_handler)],
+    #         SET_MAX_PRICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, set_max_price)],
+    #         SET_MIN_ROOMS: [MessageHandler(filters.TEXT & ~filters.COMMAND, set_min_rooms)],
+    #         SET_MAX_EXPENSAS: [MessageHandler(filters.TEXT & ~filters.COMMAND, set_max_expensas)],
+    #     },
+    #     fallbacks=[CommandHandler("cancel", cancel)],
+    # )
+    # application.add_handler(config_handler)
 
     # Schedule periodic apartment checks (every 1 hour to save resources)
     job_queue = application.job_queue
