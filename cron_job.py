@@ -90,11 +90,12 @@ def main():
         logger.info("  - ArgenProp...")
         sources["argenprop"] = scrape_argenprop()
 
-        logger.info("  - ZonaProp...")
-        sources["zonaprop"] = scrape_zonaprop()
+        # ZonaProp and MercadoLibre disabled - Cloudflare blocks Railway datacenter IPs
+        # logger.info("  - ZonaProp...")
+        # sources["zonaprop"] = scrape_zonaprop()
 
-        logger.info("  - MercadoLibre...")
-        sources["mercadolibre"] = scrape_mercadolibre()
+        # logger.info("  - MercadoLibre...")
+        # sources["mercadolibre"] = scrape_mercadolibre()
 
         # Close Playwright browser to free memory
         close_browser()
