@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -10,13 +11,22 @@ DEFAULT_CONFIG = {
     "min_price": 100000,
     "max_price": 500000,
     "min_rooms": 1,
-    "max_rooms": 3,  
+    "max_rooms": 3,
     "max_expensas": 100000
 }
 
 
 def load_all_configs():
-    """Load all user configurations from disk."""
+    """Load all user configurations from disk or environment variable."""
+    # First try environment variable (for Railway deployment)
+    env_configs = os.getenv("USER_CONFIGS")
+    if env_configs:
+        try:
+            return json.loads(env_configs)
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse USER_CONFIGS env var: {e}")
+
+    # Fall back to file (for local development)
     try:
         if CONFIG_FILE.exists():
             content = CONFIG_FILE.read_text(encoding='utf-8')
