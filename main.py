@@ -264,8 +264,9 @@ async def run_manual_search(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Scrape all sources (1 page each, sorted by most recent)
         sources = {
             "argenprop": scrape_argenprop(),
-            "zonaprop": scrape_zonaprop(),
-            "mercadolibre": scrape_mercadolibre(),
+            # ZonaProp and MercadoLibre disabled - Cloudflare blocks Railway datacenter IPs
+            # "zonaprop": scrape_zonaprop(),
+            # "mercadolibre": scrape_mercadolibre(),
         }
 
         # Close browser after Playwright-based scraping
@@ -351,11 +352,12 @@ async def check_and_notify(context: ContextTypes.DEFAULT_TYPE):
         logger.info("Scraping ArgenProp...")
         sources["argenprop"] = scrape_argenprop()
 
-        logger.info("Scraping ZonaProp...")
-        sources["zonaprop"] = scrape_zonaprop()
+        # ZonaProp and MercadoLibre disabled - Cloudflare blocks Railway datacenter IPs
+        # logger.info("Scraping ZonaProp...")
+        # sources["zonaprop"] = scrape_zonaprop()
 
-        logger.info("Scraping MercadoLibre...")
-        sources["mercadolibre"] = scrape_mercadolibre()
+        # logger.info("Scraping MercadoLibre...")
+        # sources["mercadolibre"] = scrape_mercadolibre()
 
         # Close browser after Playwright-based scraping to free memory
         close_browser()
