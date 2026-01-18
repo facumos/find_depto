@@ -15,6 +15,7 @@ Usage:
 
 import os
 import sys
+import gc
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
@@ -90,15 +91,19 @@ def main():
         logger.info("  - ArgenProp...")
         sources["argenprop"] = scrape_argenprop()
 
-        # ZonaProp and MercadoLibre disabled - Cloudflare blocks Railway datacenter IPs
-        # logger.info("  - ZonaProp...")
-        # sources["zonaprop"] = scrape_zonaprop()
+        # ZonaProp and MercadoLibre only work locally (Cloudflare blocks Railway IPs)
+        if not os.getenv("RAILWAY_ENVIRONMENT"):
+            logger.info("  - ZonaProp...")
+            sources["zonaprop"] = scrape_zonaprop()
 
-        # logger.info("  - MercadoLibre...")
-        # sources["mercadolibre"] = scrape_mercadolibre()
+            logger.info("  - MercadoLibre...")
+            sources["mercadolibre"] = scrape_mercadolibre()
+        else:
+            logger.info("  - Skipping ZonaProp/MercadoLibre (Railway environment)")
 
         # Close Playwright browser to free memory
         close_browser()
+        gc.collect()  # Force garbage collection to release memory
 
         logger.info("  - Inmobusqueda...")
         sources["inmobusqueda"] = scrape_inmobusqueda()
@@ -160,9 +165,12 @@ def main():
             if not config.get("active", True):
                 continue
 
+            matched_count = sum(1 for ap in to_send if matches(ap, config))
+            logger.info(f"User {user_id}: {matched_count}/{len(to_send)} apartments match filters")
+
             for ap in to_send:
                 if matches(ap, config):
-                    logger.info(f"Sending to {user_id}: {ap['url']}")
+                    logger.info(f"  Sending to {user_id}: {ap['url']}")
                     try:
                         send_message(TOKEN, user_id, ap)
                         total_sent += 1

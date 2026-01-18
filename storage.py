@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 
 DB_FILE = Path("sent.json")
 QUEUE_FILE = Path("queue.json")
+MAX_SENT_IDS = 300  # Limit stored IDs to prevent infinite growth
 
 
 def load_sent():
@@ -42,14 +43,21 @@ def load_sent():
 def save_sent(sent):
     """
     Save the set of sent listing IDs to disk using atomic write.
-    
+    Keeps only the most recent MAX_SENT_IDS to prevent infinite growth.
+
     Args:
         sent: Set of listing IDs to save
     """
     try:
+        # Limit to most recent IDs (keep last MAX_SENT_IDS)
+        sent_list = list(sent)
+        if len(sent_list) > MAX_SENT_IDS:
+            sent_list = sent_list[-MAX_SENT_IDS:]
+            logger.info(f"Trimmed sent.json from {len(sent)} to {MAX_SENT_IDS} IDs")
+
         # Atomic write: write to temp file first, then rename
         temp_file = DB_FILE.with_suffix('.json.tmp')
-        data = json.dumps(list(sent), indent=2, ensure_ascii=False)
+        data = json.dumps(sent_list, indent=2, ensure_ascii=False)
         
         with tempfile.NamedTemporaryFile(
             mode='w',

@@ -9730,3 +9730,305 @@ telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in
 2026-01-17 23:32:36,795 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
 2026-01-17 23:32:47,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
 2026-01-17 23:32:47,363 - __main__ - INFO - Shutting down, cleaning up browser...
+2026-01-18 10:18:51,935 - __main__ - INFO - Telegram Apartment Bot Starting...
+2026-01-18 10:18:52,095 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-18 10:18:52,095 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2026-01-18 10:18:53,047 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getMe "HTTP/1.1 200 OK"
+2026-01-18 10:18:53,353 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/deleteWebhook "HTTP/1.1 200 OK"
+2026-01-18 10:18:53,359 - apscheduler.scheduler - INFO - Added job "check_and_notify" to job store "default"
+2026-01-18 10:18:53,360 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-18 10:18:53,360 - telegram.ext.Application - INFO - Application started
+2026-01-18 10:18:54,275 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:19:02,103 - apscheduler.executors.default - INFO - Running job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:19:02 UTC)" (scheduled at 2026-01-18 13:19:02.094294+00:00)
+2026-01-18 10:19:02,104 - __main__ - INFO - ==================================================
+2026-01-18 10:19:02,104 - __main__ - INFO - Starting apartment check at 2026-01-18 10:19:02
+2026-01-18 10:19:02,111 - __main__ - INFO - Loaded 1512 previously sent listings
+2026-01-18 10:19:02,112 - __main__ - INFO - Scraping ArgenProp...
+2026-01-18 10:19:04,623 - scrappers.argenprop - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-18 10:19:04,624 - __main__ - INFO - Scraping ZonaProp...
+2026-01-18 10:19:04,625 - scrappers.browser_manager - INFO - Launching shared Chromium browser...
+2026-01-18 10:19:05,772 - scrappers.browser_manager - INFO - Browser launched successfully
+2026-01-18 10:19:11,253 - scrappers.zonaprop - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-18 10:19:11,254 - __main__ - INFO - Scraping MercadoLibre...
+2026-01-18 10:19:19,296 - scrappers.mercadolibre - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-18 10:19:19,329 - scrappers.browser_manager - INFO - Browser closed
+2026-01-18 10:19:19,341 - scrappers.browser_manager - INFO - Playwright stopped
+2026-01-18 10:19:19,342 - __main__ - INFO - Scraping Inmobusqueda...
+2026-01-18 10:19:20,803 - scrappers.inmobusqueda - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-18 10:19:20,805 - __main__ - INFO - Found 114 total listings from all sources
+2026-01-18 10:19:20,807 - __main__ - INFO - Checking for 2 registered users
+2026-01-18 10:19:20,807 - __main__ - INFO - Found 12 new apartments (not seen before)
+2026-01-18 10:19:20,809 - __main__ - INFO - Sending to user 1416589926 from argenprop: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--12929085
+2026-01-18 10:19:20,812 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:19:21,792 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:19:21,795 - __main__ - INFO - Sending to user 8588585964 from argenprop: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--12929085
+2026-01-18 10:19:22,174 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:19:22,190 - __main__ - INFO - ==================================================
+2026-01-18 10:19:22,190 - apscheduler.executors.default - INFO - Job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:19:02 UTC)" executed successfully
+2026-01-18 10:19:31,060 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:19:41,303 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:19:51,624 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:20:01,967 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:20:12,311 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:20:22,654 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:20:32,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:20:43,340 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:20:53,588 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:03,834 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:14,164 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:24,508 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:34,851 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:45,199 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:55,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:21:57,302 - __main__ - INFO - Shutting down, cleaning up browser...
+2026-01-18 10:22:00,003 - __main__ - INFO - Telegram Apartment Bot Starting...
+2026-01-18 10:22:00,156 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-18 10:22:00,156 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2026-01-18 10:22:00,970 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getMe "HTTP/1.1 200 OK"
+2026-01-18 10:22:01,270 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/deleteWebhook "HTTP/1.1 200 OK"
+2026-01-18 10:22:01,273 - apscheduler.scheduler - INFO - Added job "check_and_notify" to job store "default"
+2026-01-18 10:22:01,273 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-18 10:22:01,273 - telegram.ext.Application - INFO - Application started
+2026-01-18 10:22:10,164 - apscheduler.executors.default - INFO - Running job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:22:10 UTC)" (scheduled at 2026-01-18 13:22:10.154982+00:00)
+2026-01-18 10:22:10,164 - __main__ - INFO - ==================================================
+2026-01-18 10:22:10,165 - __main__ - INFO - Starting apartment check at 2026-01-18 10:22:10
+2026-01-18 10:22:10,169 - __main__ - INFO - Loaded 1524 previously sent listings
+2026-01-18 10:22:10,170 - __main__ - INFO - Scraping ArgenProp...
+2026-01-18 10:22:12,947 - scrappers.argenprop - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-18 10:22:12,949 - __main__ - INFO - Scraping ZonaProp...
+2026-01-18 10:22:12,950 - scrappers.browser_manager - INFO - Launching shared Chromium browser...
+2026-01-18 10:22:13,477 - scrappers.browser_manager - INFO - Browser launched successfully
+2026-01-18 10:22:18,265 - scrappers.zonaprop - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-18 10:22:18,268 - __main__ - INFO - Scraping MercadoLibre...
+2026-01-18 10:22:25,964 - scrappers.mercadolibre - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-18 10:22:26,003 - scrappers.browser_manager - INFO - Browser closed
+2026-01-18 10:22:26,017 - scrappers.browser_manager - INFO - Playwright stopped
+2026-01-18 10:22:26,017 - __main__ - INFO - Scraping Inmobusqueda...
+2026-01-18 10:22:27,159 - scrappers.inmobusqueda - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-18 10:22:27,160 - __main__ - INFO - Found 114 total listings from all sources
+2026-01-18 10:22:27,161 - __main__ - INFO - Checking for 2 registered users
+2026-01-18 10:22:27,161 - __main__ - INFO - Found 0 new apartments (not seen before)
+2026-01-18 10:22:27,179 - __main__ - INFO - ==================================================
+2026-01-18 10:22:27,179 - apscheduler.executors.default - INFO - Job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:22:10 UTC)" executed successfully
+2026-01-18 10:22:27,180 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:22:37,460 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:22:47,762 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:22:58,019 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:23:08,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:23:18,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:23:29,031 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:23:39,374 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:23:49,717 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:00,059 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:10,402 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:20,746 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:31,005 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:41,262 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:51,569 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:24:51,768 - __main__ - INFO - Shutting down, cleaning up browser...
+2026-01-18 10:24:53,713 - __main__ - INFO - Telegram Apartment Bot Starting...
+2026-01-18 10:24:53,849 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-18 10:24:53,849 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2026-01-18 10:24:54,745 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getMe "HTTP/1.1 200 OK"
+2026-01-18 10:24:55,051 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/deleteWebhook "HTTP/1.1 200 OK"
+2026-01-18 10:24:55,054 - apscheduler.scheduler - INFO - Added job "check_and_notify" to job store "default"
+2026-01-18 10:24:55,054 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-18 10:24:55,055 - telegram.ext.Application - INFO - Application started
+2026-01-18 10:25:03,857 - apscheduler.executors.default - INFO - Running job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:25:03 UTC)" (scheduled at 2026-01-18 13:25:03.848853+00:00)
+2026-01-18 10:25:03,858 - __main__ - INFO - ==================================================
+2026-01-18 10:25:03,858 - __main__ - INFO - Starting apartment check at 2026-01-18 10:25:03
+2026-01-18 10:25:03,859 - __main__ - INFO - Loaded 1524 previously sent listings
+2026-01-18 10:25:03,860 - __main__ - INFO - Scraping ArgenProp...
+2026-01-18 10:25:06,139 - scrappers.argenprop - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-18 10:25:06,140 - __main__ - INFO - Scraping ZonaProp...
+2026-01-18 10:25:06,141 - scrappers.browser_manager - INFO - Launching shared Chromium browser...
+2026-01-18 10:25:06,592 - scrappers.browser_manager - INFO - Browser launched successfully
+2026-01-18 10:25:10,957 - scrappers.zonaprop - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-18 10:25:10,960 - __main__ - INFO - Scraping MercadoLibre...
+2026-01-18 10:25:18,801 - scrappers.mercadolibre - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-18 10:25:18,843 - scrappers.browser_manager - INFO - Browser closed
+2026-01-18 10:25:18,858 - scrappers.browser_manager - INFO - Playwright stopped
+2026-01-18 10:25:18,858 - __main__ - INFO - Scraping Inmobusqueda...
+2026-01-18 10:25:20,026 - scrappers.inmobusqueda - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-18 10:25:20,027 - __main__ - INFO - Found 114 total listings from all sources
+2026-01-18 10:25:20,028 - __main__ - INFO - Checking for 2 registered users
+2026-01-18 10:25:20,028 - __main__ - INFO - Found 0 new apartments (not seen before)
+2026-01-18 10:25:20,028 - storage - INFO - Trimmed sent.json from 1524 to 300 IDs
+2026-01-18 10:25:20,042 - __main__ - INFO - ==================================================
+2026-01-18 10:25:20,042 - apscheduler.executors.default - INFO - Job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:25:03 UTC)" executed successfully
+2026-01-18 10:25:20,043 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:25:30,379 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:25:35,704 - __main__ - INFO - Shutting down, cleaning up browser...
+2026-01-18 10:27:13,831 - __main__ - INFO - Telegram Apartment Bot Starting...
+2026-01-18 10:27:13,964 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-18 10:27:13,964 - __main__ - INFO - Bot is running. Press Ctrl+C to stop.
+2026-01-18 10:27:14,871 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getMe "HTTP/1.1 200 OK"
+2026-01-18 10:27:15,136 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/deleteWebhook "HTTP/1.1 200 OK"
+2026-01-18 10:27:15,139 - apscheduler.scheduler - INFO - Added job "check_and_notify" to job store "default"
+2026-01-18 10:27:15,139 - apscheduler.scheduler - INFO - Scheduler started
+2026-01-18 10:27:15,139 - telegram.ext.Application - INFO - Application started
+2026-01-18 10:27:23,973 - apscheduler.executors.default - INFO - Running job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:27:23 UTC)" (scheduled at 2026-01-18 13:27:23.963504+00:00)
+2026-01-18 10:27:23,973 - __main__ - INFO - ==================================================
+2026-01-18 10:27:23,974 - __main__ - INFO - Starting apartment check at 2026-01-18 10:27:23
+2026-01-18 10:27:23,975 - __main__ - INFO - Loaded 300 previously sent listings
+2026-01-18 10:27:23,976 - __main__ - INFO - Scraping ArgenProp...
+2026-01-18 10:27:26,704 - scrappers.argenprop - INFO - Successfully scraped 20 listings from 1 pages
+2026-01-18 10:27:26,705 - __main__ - INFO - Scraping ZonaProp...
+2026-01-18 10:27:26,706 - scrappers.browser_manager - INFO - Launching shared Chromium browser...
+2026-01-18 10:27:27,144 - scrappers.browser_manager - INFO - Browser launched successfully
+2026-01-18 10:27:31,469 - scrappers.zonaprop - INFO - Successfully scraped 26 listings from ZonaProp
+2026-01-18 10:27:31,470 - __main__ - INFO - Scraping MercadoLibre...
+2026-01-18 10:27:39,060 - scrappers.mercadolibre - INFO - Successfully scraped 48 listings from MercadoLibre
+2026-01-18 10:27:39,086 - scrappers.browser_manager - INFO - Browser closed
+2026-01-18 10:27:39,104 - scrappers.browser_manager - INFO - Playwright stopped
+2026-01-18 10:27:39,104 - __main__ - INFO - Scraping Inmobusqueda...
+2026-01-18 10:27:40,324 - scrappers.inmobusqueda - INFO - Successfully scraped 20 listings from Inmobusqueda
+2026-01-18 10:27:40,326 - __main__ - INFO - Found 114 total listings from all sources
+2026-01-18 10:27:40,326 - __main__ - INFO - Checking for 2 registered users
+2026-01-18 10:27:40,326 - __main__ - INFO - Found 97 new apartments (not seen before)
+2026-01-18 10:27:40,327 - __main__ - INFO - Sending to user 1416589926 from argenprop: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18799505
+2026-01-18 10:27:40,329 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:27:41,329 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:41,330 - __main__ - INFO - Sending to user 1416589926 from argenprop: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18803673
+2026-01-18 10:27:41,761 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:41,764 - __main__ - INFO - Sending to user 1416589926 from zonaprop: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=8
+2026-01-18 10:27:42,164 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:42,166 - __main__ - INFO - Sending to user 1416589926 from zonaprop: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132152.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=9
+2026-01-18 10:27:42,555 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:42,556 - __main__ - INFO - Sending to user 1416589926 from mercadolibre: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=ea6272f9-ca7b-46d2-8036-37eb7c574f2a
+2026-01-18 10:27:43,025 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:43,028 - __main__ - INFO - Sending to user 1416589926 from mercadolibre: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=7&type=item&tracking_id=ea6272f9-ca7b-46d2-8036-37eb7c574f2a
+2026-01-18 10:27:43,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:43,426 - __main__ - INFO - Sending to user 1416589926 from inmobusqueda: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=267128965
+2026-01-18 10:27:43,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:43,822 - __main__ - INFO - Sending to user 1416589926 from inmobusqueda: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=1582754792
+2026-01-18 10:27:44,213 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:44,215 - __main__ - INFO - Sending to user 8588585964 from argenprop: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18799505
+2026-01-18 10:27:44,661 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:44,662 - __main__ - INFO - Sending to user 8588585964 from argenprop: https://www.argenprop.com/departamento-en-alquiler-en-la-plata-2-ambientes--18803673
+2026-01-18 10:27:45,139 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:45,141 - __main__ - INFO - Sending to user 8588585964 from zonaprop: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-monoambiente-en-alquiler-1-bano-la-58132798.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=6
+2026-01-18 10:27:45,536 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:45,537 - __main__ - INFO - Sending to user 8588585964 from zonaprop: https://www.zonaprop.com.ar/propiedades/clasificado/alclapin-departamento-en-alquiler-1-dormitorio-1-bano-la-58132153.html?n_src=Listado&n_pills=Luminoso&n_pg=1&n_pos=8
+2026-01-18 10:27:45,955 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:45,956 - __main__ - INFO - Sending to user 8588585964 from mercadolibre: https://departamento.mercadolibre.com.ar/MLA-2790127712-alquiler-depto-2amb-centro-estudiantes-9-meses-_JM#polycard_client=search-desktop&search_layout=grid&position=5&type=item&tracking_id=ea6272f9-ca7b-46d2-8036-37eb7c574f2a
+2026-01-18 10:27:46,363 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:46,364 - __main__ - INFO - Sending to user 8588585964 from mercadolibre: https://departamento.mercadolibre.com.ar/MLA-2790004652-alquiler-departamento-2-ambientes-en-la-plata-_JM#polycard_client=search-desktop&search_layout=grid&position=7&type=item&tracking_id=ea6272f9-ca7b-46d2-8036-37eb7c574f2a
+2026-01-18 10:27:46,880 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:46,881 - __main__ - INFO - Sending to user 8588585964 from inmobusqueda: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518042&pos=2&ppv=72000&lp=0&hash=5b8cc26270a08a80feb05bf670d436f2a34116a3&rd=267128965
+2026-01-18 10:27:47,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:47,394 - __main__ - INFO - Sending to user 8588585964 from inmobusqueda: https://www.inmobusqueda.com.ar/ficha.verdestacado.php?id=518078&pos=4&ppv=70000&lp=0&hash=546ac4934074d2ef806b43fc94aa4559b67b9759&rd=1582754792
+2026-01-18 10:27:47,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/sendMessage "HTTP/1.1 200 OK"
+2026-01-18 10:27:47,787 - storage - INFO - Trimmed sent.json from 397 to 300 IDs
+2026-01-18 10:27:47,801 - __main__ - INFO - ==================================================
+2026-01-18 10:27:47,802 - apscheduler.executors.default - INFO - Job "check_and_notify (trigger: interval[1:00:00], next run at: 2026-01-18 14:27:23 UTC)" executed successfully
+2026-01-18 10:27:50,670 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:28:01,012 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:28:11,355 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:28:21,600 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:28:31,843 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:28:42,088 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:28:52,326 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:29:02,658 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:29:13,001 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:29:23,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:29:33,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:29:43,730 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:29:54,063 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:30:04,305 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:30:14,646 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:30:24,890 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:30:35,229 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:30:45,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:30:55,913 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:31:06,256 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:31:16,498 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:31:26,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:31:37,180 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:31:47,523 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:31:53,744 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:32:03,987 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:32:14,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:32:24,495 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:32:34,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:32:45,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:32:55,518 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:33:05,762 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:33:16,100 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:33:26,443 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:33:36,785 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:33:47,128 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:33:57,396 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:34:07,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:34:17,952 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:34:28,226 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:34:38,465 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:34:48,775 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:34:59,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:35:09,454 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:35:19,709 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:35:29,951 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:35:40,195 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:35:50,441 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:36:00,756 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:36:11,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:36:21,440 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:36:31,680 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:36:41,919 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:36:52,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:37:02,605 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:37:12,946 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:37:23,290 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:37:33,631 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:37:36,601 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 409 Conflict"
+2026-01-18 10:37:36,604 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fmos/Documents/00_Coding/apartment_bot/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-18 10:37:47,864 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:37:58,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:38:08,447 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:38:18,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:38:29,131 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:38:39,473 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:38:49,817 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:39:00,157 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:39:10,397 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:39:20,638 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:39:30,979 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:39:41,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:39:51,664 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:40:02,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:40:12,349 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:40:22,691 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:40:33,033 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:40:43,279 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:40:53,615 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:41:03,957 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:41:14,299 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
+2026-01-18 10:41:24,647 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8515341054:AAGLbPYICYimfzknKl5MaC8QdmfwvevCaXs/getUpdates "HTTP/1.1 200 OK"
